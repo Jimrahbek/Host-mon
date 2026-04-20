@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+import artistliste from "../components/artisterliste.astro";
+
+const url = `${import.meta.env.SUPABASE_URL}/rest/v1/Artister?select=*`;
+const apiKey = import.meta.env.SUPABASE_PUBLISHABLE_KEY;
+
+const options = {
+  headers: {
+    apikey: apiKey
+  }
+};
+
+const data = await fetch(url, options).then(res => res.json());
+---
+
+<Layout>
+  <h1>Lineup</h1>
+<p>På Høst Møn kan du opleve stemningsfulde koncerter, nærværende musikoplevelser, hyggelige fællesskaber og spændende kunstnere både etablerede navne og nye talenter – samlet i de smukke omgivelser på Møn.
+Vi offentliggør hermed programmet for Høst Møn 2026. Se hvilke artister og oplevelser, du allerede nu kan begynde at glæde dig til her</p>
+  {data.map((artist) => (
+    <a href={`/kunstnere/${artist.id}`}>
+      <img src={`/${artist.billede}`} alt="">
+      <h2>{artist.navn}</h2>
+    </a>
+  ))}
+</Layout>
