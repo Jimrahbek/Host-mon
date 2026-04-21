@@ -21,8 +21,67 @@ function formatSpilletid(value) {
   return `${day}. ${month} kl ${hours}:${minutes}`;
 }
 ---
-<h2>{artister.navn}</h2>
-<img src={`/${artister.billede}`} alt="">
+<div class="style">
+<div class="content-left">
+<img class="pic" src={`/${artister.billede}`} alt="">
+</div>
+<div class="content-right">
+<img class="navn" src={`/${artister.navnSvg}`} alt="" />
+<img class="pic-mobile" src={`/${artister.billede}`} alt="">
 <h2>{formatSpilletid(artister.spilletid)}</h2>
 <p>{artister.artistbeskrivelse}</p>
-<style></style>
+<h3>{artister.overskrift}</h3>
+<a href={artister.spotify}target="_blank" >
+  <img src="/billeder/spotify.svg" alt="spotify">
+  <a href={artister.instagram}target="_blank" >
+  <img src="/billeder/instagram.svg" alt="spotify">
+</a>
+</div>
+</div>
+<style>
+.style img.pic {
+  width: 100%;
+  max-width: 800px;   
+  height: auto;
+  display: block;
+}
+
+.pic-mobile {
+  display: none;
+}
+
+.style{
+        display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10%;
+  flex-direction: column;
+  align-items: center; 
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+
+/* mobile */
+@media (max-width: 768px) {
+  .style {
+    grid-template-columns: 1fr;
+    gap: 2%;
+  }
+
+  .content-left {
+    display: none;
+  }
+
+  .pic-mobile {
+    display: block;
+    width: 100%;
+    max-width: 800px;   
+    height: auto;
+  }
+
+  .navn{
+    padding-left: 10%;
+  }
+}
+
+</style>
