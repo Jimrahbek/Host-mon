@@ -1,0 +1,153 @@
+<main>
+      <h1>Om Høst Møn</h1>
+
+      <section class="om_host_mon_section">
+        <div class="om_host_mon_overskrift_1">
+          <h2>Man kan tage festivalen ud af Møn – men ikke Møn ud af festivalen</h2>
+        </div>
+
+        <div class="om_host_mon_tekst_1">
+          <p>
+            Billetterne er i salg nu! Inflationen inden for æstetik, alkohol og gebyrer er stadig høj, så priserne bliver nødt til at følge med. Men det lover vi, at kvaliteten og oplevelsen også gør, og vi stiller pengene-tilbage-garanti for enorm lykke. Hvad med navnet? Det finder vi ud af. Indtil videre hedder vi det samme. Man kan tage festivalen ud af Møn, men ikke Møn ud af festivalen og alt det der. Det er den syvende Høst Møn på ni år, for hverken verdensomspændende pandemier eller lokalt huserende markfirben kan holde os fra at skabe skønne, støjende fællesskaber på sydlige breddegrader med alle jer.Vi er sikkert stadig sommerens sidste skrig, og vores enorme ambitioner er uændrede. Høst Møn er en musikfestival for folk, der elsker begge dele: musik og festival. Vi er til for
+            mennesker, der gerne vil lytte til musikken. Vi booker bredt fra dit yndlingsband til de små spillesteders snavsede juveler.
+          </p>
+        </div>
+        <div class="om_host_mon_billede_1">
+          <img src="img/om_host_mon_1.png" alt="Om Høst Møn billede" />
+        </div>
+
+        <div class="om_host_mon_billede_2">
+          <img src="img/om_host_mon_2.png" alt="Om Høst Møn billede" />
+        </div>
+        <div class="om_host_mon_overskrift_2">
+          <h2>Høst Møn 2026: Musik, fællesspisning og festival med plads til det hele</h2>
+        </div>
+
+        <div class="om_host_mon_tekst_2">
+          <p>Der kommer mindst 12 bands på årets festival. Der kommer økologisk fadøl og lokalbrygget gin. Der er opbyggelig fællesspisning med nedbrydeligt bestik under kulørte lamper. Det er havudsigt, stjernehimmel og træk-og-slip.Du kan gøre, hvad du vil på Høst Møn - med eller uden børn og søvn. Omgivelserne er trygge, og rammerne er vide, og hvis du vil bade om natten og drikke om morgenen, så can du gøre det. Så længe du ikke snakker foran scenen, når musikken spiller.Det lykkedes os ikke at finde et nyt sted i 2025, så i stedet brugte vi vores kræfter på at kuratere og afvikle musik til den nystartede Impact Festival i Københavns Sydhavn sammen med de fine folk fra Trifolium. Det gør vi igen i 2026, samtidig med at vi holder Høst Møn.</p>
+        </div>
+
+        <div class="om_host_mon_kontakt">
+          <h2>Kontakt os:</h2>
+          <p>Spørgsmål, samarbejde, generel info: info@hoestmoen.dk</p>
+          <p>Booking: booking@hoestmoen.dk</p>
+          <p>Produktion (scene, plads, infrastruktur): produktion@hoestmoen.dk</p>
+          <p>Frivillig: frivillig@hoestmoen.dk</p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p class="footer_adresse">Fortvej 8, 4760, Vordingborg.</p>
+      <div class="footer_social_media">
+        <a href="https://www.facebook.com/hoestmoen" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/hoestmoen/" target="_blank">Instagram</a>
+      </div>
+      <p class="footer_mail">info@hoestmoen.dk</p>
+    </footer>
+
+<style>
+
+    .om_host_mon_section {
+  display: grid;
+  grid-template-columns: 500px 200px 460px;
+  grid-template-rows: 87px 390px 87px 390px 150px;
+  width: 1300px;
+  margin: 0 auto;
+  justify-content: center;
+  gap: 1rem;
+}
+.om_host_mon_section > * {
+  margin: 0;
+}
+
+.om_host_mon_section img {
+  max-width: 500px;
+  max-height: 380px;
+  object-fit: cover;
+  display: block;
+}
+/************  1. række *************/
+.om_host_mon_overskrift_1 {
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+.om_host_mon_overskrift_1 h2 {
+  margin: 0;
+}
+
+/************  2. række *************/
+.om_host_mon_tekst_1 {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+}
+
+.om_host_mon_billede_1 {
+  grid-column: 3;
+  grid-row: 2;
+  align-self: stretch;
+}
+/************  3. række *************/
+.om_host_mon_overskrift_2 {
+  grid-column: 2 / span 2;
+  grid-row: 3;
+}
+
+/************  4. række *************/
+.om_host_mon_billede_2 {
+  grid-column: 1;
+  grid-row: 4;
+  align-self: stretch;
+}
+
+.om_host_mon_tekst_2 {
+  grid-column: 2 / span 2;
+  grid-row: 4;
+}
+
+/************  5. række *************/
+.om_host_mon_kontakt {
+  grid-column: 2 / span 2;
+  grid-row: 5;
+  gap: 1rem;
+}
+
+.om_host_mon_kontakt h2,
+.om_host_mon_kontakt p {
+  margin: 0 0 2px 0;
+}
+
+@media (max-width: 1600px) {
+  .om_host_mon_section {
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 0 1rem;
+  }
+
+  .om_host_mon_billede_2 img {
+    justify-self: left;
+    grid-area: 1 / span 2;
+  }
+
+  .om_host_mon_overskrift_1,
+  .om_host_mon_tekst_1,
+  .om_host_mon_billede_2,
+  .om_host_mon_overskrift_2,
+  .om_host_mon_tekst_2,
+  .om_host_mon_billede_1,
+  .om_host_mon_kontakt {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .om_host_mon_billede_1,
+  .om_host_mon_billede_2 {
+    height: auto;
+  }
+
+  .om_host_mon_billede_1 img,
+  .om_host_mon_billede_2 img {
+    height: auto;
+  }
+}
+</style>
