@@ -31,8 +31,8 @@ const { title } = Astro.props;
         </div>
         <nav class="burger-nav">
             <div class="burger-link">
-                <a href="/omHostMon" class="burger-title">Om høst møn</a>
-                <a href="/omHostMon" class="burger-arrow">→</a>
+                <a href="/om_host_mon" class="burger-title">Om høst møn</a>
+                <a href="/om_host_mon" class="burger-arrow">→</a>
             </div>
 
             <div class="burger-link">
@@ -46,13 +46,13 @@ const { title } = Astro.props;
             </div>
 
             <div class="burger-link">
-                <a href="/festivalOversigt" class="burger-title">Festival oversigt</a>
+                <a href="/festivalOversigt" class="burger-title">Festival oversigt </a>
                 <a href="/festivalOversigt" class="burger-arrow">→</a>
             </div>
 
             <div class="burger-link">
-                <a href="/maltidet" class="burger-title">Menu</a>
-                <a href="/maltidet" class="burger-arrow">→</a>
+                <a href="/maaltidet" class="burger-title">Menu </a>
+                <a href="/maaltidet" class="burger-arrow">→</a>
             </div>
 
             <div class="burger-link">
@@ -85,7 +85,15 @@ const { title } = Astro.props;
     </main>
 
     <footer>
-      
+      <p class="footer_adresse">Fortvej 8, 4760, Vordingborg.</p>
+      <div class="footer_social_media">
+
+       <a href="https://www.facebook.com/hoestmoen">
+       <img src="img/FB.png"> </a>
+
+        <a href="https://www.instagram.com/hoestmoen/"> <img src="img/IG.png"></a>
+      </div>
+      <p class="footer_mail">info@hoestmoen.dk</p>
     </footer>
   </body>
 </html>
@@ -95,6 +103,57 @@ const { title } = Astro.props;
 
 
 <style>
+footer {
+  width: min(1200px, 100%);
+  margin-inline: auto;
+}
+
+
+/*********************** Footer *****************/
+footer {
+  background-color: var(--color-primary);
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  color: var(--color-text-light);
+  text-decoration: none;
+}
+
+/************  Footer *************/
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+  text-align: center;
+  background-color: var(--color-primary);
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+.footer_adresse {
+  text-align: bottom;
+  justify-self: right;
+  padding: 0, 5rem;
+  color: var(--color-text-light);
+}
+
+.footer_social_media {
+  text-align: bottom;
+  justify-self: center;
+  padding: 1rem;
+  width: 100%;
+  color: var(--color-text-light);
+}
+
+.footer_mail {
+  text-align: bottom;
+  justify-self: left;
+  padding: 0, 5rem;
+  color: var(--color-text-light);
+}
+
 	body {
   margin: 0;
   background-color: #c8d2bd;
