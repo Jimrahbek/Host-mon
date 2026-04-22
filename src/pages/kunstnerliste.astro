@@ -15,6 +15,7 @@ const data = await fetch(url, options).then(res => res.json());
 ---
 
 <Layout>
+    <div class="luft">
     <div class="title">
       <h1>Lineup</h1>
       <p class="info">På Høst Møn kan du opleve stemningsfulde koncerter, nærværende musikoplevelser, hyggelige fællesskaber og spændende kunstnere både etablerede navne og nye talenter – samlet i de smukke omgivelser på Møn.
@@ -24,17 +25,38 @@ Vi offentliggør hermed programmet for Høst Møn 2026. Se hvilke artister og op
 <div class="timeline">
   {data.map((artist: any) => (
     <a href={`/kunstnere/${artist.id}`} class="item">
-      <img src={`/${artist.billede}`} alt="" />
+        <div class="img-wrapper">
+    <img src={`/${artist.billede}`} alt="" />
+  </div>
       <h2 class="pad">{artist.navn}</h2>
     </a>
   ))}
 </div>
+</div>
 </Layout>
 
     <style>
+.img-wrapper {
+  height: 600px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden; 
+}
+.img-wrapper img {
+  max-height: 100%;  
+  width: auto;
+  max-width: 100%;
+  display: block;
+}
+
+.luft{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
 .pad{
     padding-top: 10%;
-     padding-left: 10%;
+     padding-left: 10%;     
 }
 
 .title{
@@ -55,6 +77,7 @@ Vi offentliggør hermed programmet for Høst Møn 2026. Se hvilke artister og op
 .info{
     padding-left: 5%;
     padding-right: 5%;
+    width: 40%;
 }
 
 .timeline img {
@@ -70,5 +93,10 @@ Vi offentliggør hermed programmet for Høst Møn 2026. Se hvilke artister og op
     grid-template-columns: 1fr;
     gap: 2%;
   }
+  .info{
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 80%;
+}
 }
     </style>
