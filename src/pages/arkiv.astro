@@ -4,10 +4,7 @@ import Layout from "../layouts/Layout.astro";
 
 ---
 <layout>
-</layout>
-    <body>
-    <main>
-        <h1 class="arkiv">Arkiv
+   <h1 class="arkiv">Arkiv
         </h1>
         <h3 class="underskrift">Se hvilke artister vi har haft glæde af til tidligere arrangmenter</h3>
         <div class="grid">
@@ -38,19 +35,13 @@ import Layout from "../layouts/Layout.astro";
                 <img src="/img/billede6.webp" alt="billede6">
             </div>
         </div>
-    </main>
-    <footer>
-        <p class="fortvej">Fortvej 8, 4760, Vordingborg</p>
-        <p class="infohost">info@hoestmoen.dk</p>
-    </footer>
-</body>
-
-</html>
-
+</layout>
 <style>
-   .grid {
+.grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 0 20px;
 }
 body {
   background-color: #dae6cb;
@@ -59,11 +50,9 @@ body {
 .underskrift {
   font-family: "Mochiy Pop One";
   font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  width: 310px;
-  height: 111px;
-  margin: auto;
+  text-align: center;
+  max-width: 350px;
+  margin: 0 auto 20px auto;
 }
 .arkiv {
   padding: 5px;
@@ -74,24 +63,24 @@ body {
 }
 
 img {
-  width: 80%;
-  position: relative;
+  max-width: 150px;
+  height: auto;
 }
-h1,
-h2 {
-  line-height: 1.1;
+.arstal h2,
+.arstal21-19 h2 {
+  margin: 0 0 10px 0;
 }
 footer {
   background-color: #00393e;
-  width: 500px;
-  height: 83px;
+
+  font-family: "Source Sans 3", sans-serif;
 }
 
 .arstal {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 64px;
+  font-size: 36px;
   font-family: "Covered By Your Grace", cursive;
 }
 
@@ -99,7 +88,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 64px;
+  font-size: 36px;
   font-family: "Covered By Your Grace", cursive;
 }
 
@@ -117,19 +106,47 @@ footer {
   .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 90px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 90px;
+  }
+  .underskrift {
+    max-width: 520px;
+  }
+  img {
+    width: 100%;
+    max-width: 300px;
+    padding: 5px;
   }
   footer {
-    background-color: #00393e;
+    width: 100%;
+    margin-top: 40px;
   }
-
+  .fortvej {
+    padding: 10px;
+  }
+  .infohost {
+    margin: 0 auto;
+    right: 20%;
+  }
   .arkiv {
     text-align: center;
     color: #a03900;
-    font-size: 40px;
+    font-size: 55px;
+
     font-family: "Covered By Your Grace", cursive;
   }
   .arstal {
-    margin: 20px;
+    font-size: 64px;
   }
-} 
+  .arstal h2,
+  .arstal21-19 h2 {
+    font-size: 64px;
+  }
+}
+
+
+
 </style>
+    
