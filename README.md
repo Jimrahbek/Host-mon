@@ -1,9 +1,3 @@
-# Astro Starter Kit: Minimal
-
-```
-npm create astro@latest -- --template minimal
-```
-
 # Teknisk dokumentation for Tema 9 gruppeprojekt
 
 Dette projekt er lavet som en del af tema 9. Vi har lavet en hjemmeside,
@@ -11,8 +5,8 @@ der fokusere på at vise informationer om festivallen Høst Møn
 
 ## Links
 
-- GitHub repository: []
-- GitHub Pages: [indsæt link]
+- GitHub repository: [https://github.com/Jimrahbek/Host-mon.git]
+- GitHub Pages: [host-g12.netlify.app]
 - Figma: [https://www.figma.com/design/NfIPM8JyvaJCm1jx5XiCIL/T9-H%C3%B8st-M%C3%B8nt?node-id=382-293&p=f&m=dev]
 
 ## Projektstruktur
