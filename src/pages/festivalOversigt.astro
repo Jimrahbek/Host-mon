@@ -28,7 +28,6 @@ import Layout from "../layouts/Layout.astro";
                     <p>Miaw</p>
                 </div>
 
-                <h2 class="lordag">LØRDAG 29. august:</h2>
 
                 <h1 class="ekkomobil">SKOVSCENEN: EKKO</h1>
                 <div class="tidspunkt">
@@ -47,11 +46,9 @@ import Layout from "../layouts/Layout.astro";
 
 
             <div class="ekko">
-                <h2 class="lordagmobil">LØRDAG 29. august:</h2>
                 <h1 class="ekkodesktop">HOVEDSCENEN: BLØGEN</h1>
+                <h2 class="lordagmobil">LØRDAG 29. august:</h2>
 
-                <h2 class="fredag17">FREDAG 28. august:</h2>
-                <h1 class="blogenmobil">HOVEDSCENEN: BLØGEN</h1>
                 <div class="tidspunkt">
 
                     <p>17:00 - 19:00</p>
@@ -66,7 +63,7 @@ import Layout from "../layouts/Layout.astro";
                     <p>Chardonnaderne</p>
                 </div>
 
-                <h2 class="lordag17">LØRDAG 29. august:</h2>
+
                 <h1 class="ekkodmobil1">SKOVSCENEN: EKKO</h1>
                 <div class="tidspunkt">
                     <p>17:00 - 19:00</p>
@@ -152,7 +149,9 @@ footer {
 .festivaloversigt img {
   width: 100%;
 }
-
+.ekkodesktop {
+  order: -2;
+}
 p {
   font-family: "Mochiy Pop One", sans-serif;
 }
@@ -221,13 +220,8 @@ p {
     display: none;
   }
 
-  .lordagmobil {
-    display: none;
-  }
-
   h1 {
     font-size: 50px;
   }
 }
-
 </style>
