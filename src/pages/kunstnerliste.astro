@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import artistliste from "../components/artisterliste.astro";
+import "../style/global.css";
 
 const url = `${import.meta.env.SUPABASE_URL}/rest/v1/Artister?select=*`;
 const apiKey = import.meta.env.SUPABASE_PUBLISHABLE_KEY;
@@ -36,6 +37,11 @@ Vi offentliggør hermed programmet for Høst Møn 2026. Se hvilke artister og op
 </Layout>
 
     <style>
+.item{
+      text-decoration: none;
+  color: inherit;
+}
+
 .img-wrapper {
   height: 600px;
   display: flex;
