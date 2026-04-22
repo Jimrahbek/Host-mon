@@ -1,182 +1,86 @@
 ---
+import Layout from "../layouts/Layout.astro";
 import "../style/global.css";
 ---
 
-<!DOCTYPE html>
-<html lang="en">
+<Layout>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="forside.css">
-    <link rel="stylesheet" href="global.css">
-	<link href="https://fonts.googleapis.com/css2?...&display=swap" rel="stylesheet">
-</head>
-
-<body>
-    <header class="topbar">
-        <div class="logo">
-            <img src="Billeder/670282915_3785650628231726_4077932530482168911_n.png" alt="Høst Møn">
-        </div>
-
-        <div class="burger" id="burger-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </header>
-
-    <div class="burger-menu" id="burger-menu">
-
-        <div class="close-btn" id="close-menu">✕</div>
-
-        <div class="burger-logo-wrap">
-            <img src="Billeder/670282915_3785650628231726_4077932530482168911_n.png" alt="Høst Møn" class="burger-logo">
-        </div>
-        <nav class="burger-nav">
-            <div class="burger-link">
-                <a href="/omHøstMøn" class="burger-title">Om høst møn</a>
-                <a href="/omHøstMøn" class="burger-arrow">→</a>
-            </div>
-
-            <div class="burger-link">
-                <a href="/kunstnerliste" class="burger-title">Program</a>
-                <a href="/kunstnerliste" class="burger-arrow">→</a>
-            </div>
-
-            <div class="burger-link">
-                <a href="/kobsOversigt" class="burger-title">Køb billet</a>
-                <a href="/kobsOversigt" class="burger-arrow">→</a>
-            </div>
-
-            <div class="burger-link">
-                <a href="/festivalOversigt" class="burger-title">Festival oversigt</a>
-                <a href="/festivalOversigt" class="burger-arrow">→</a>
-            </div>
-
-            <div class="burger-link">
-                <a href="/maltid" class="burger-title">Menu</a>
-                <a href="/maltid" class="burger-arrow">→</a>
-            </div>
-
-            <div class="burger-link">
-                <a href="/arkiv" class="burger-title">Arkiv</a>
-                <a href="/arkiv" class="burger-arrow">→</a>
-            </div>
-        </nav>
-
-        <div class="burger-contact">
-            <a href="mailto:INFO@HOESTMOEN.DK" class="contact-mail">INFO@HOESTMOEN.DK</a>
-            <p>Masnedøfortet, 4760 Vordingborg.</p>
-
-            <div class="social-block">
-                <div class="find-os">Find os her</div>
-
-                <div class="social-icons">
-                    <a href="#" aria-label="Instagram">
-                        <img src="ikoner/instagram.svg" alt="Instagram">
-                    </a>
-                    <a href="#" aria-label="Facebook">
-                        <img src="ikoner/facebook.svg" alt="Facebook">
-                    </a>
-                </div>
-            </div>
-        </div>
+  
+  
+  <div class="forsidebilledeogh1">
+    <div class="overskrift">
+      <h1>Tæt på naturen, tæt på musikken.</h1>
     </div>
-    <div class="forsidebilledeogh1">
-        <div class="overskrift">
-            <h1>Tæt på naturen, tæt på musikken.</h1>
-        </div>
-
-        <div class="hostmonforsidebillede">
-            <img src="/Billeder/hostmonforside.png" alt="">
-        </div>
+    
+    <div class="hostmonforsidebillede">
+      <img src="/Billeder/hostmonforside.png" alt="">
     </div>
-    <div class="sektion">
-        <div class="sektiontekst">
-            <div class="sektion-overskrift">
-                <h2>Musik, natur og fællesskab i fokus</h2>
-            </div>
-            <div class="sektion-tekst">
-                <p>
-                    En intim musikfestival med fokus på indie og alternativ musik, hvor nærvær og kvalitet er i centrum.
-                    Oplev koncerter i smukke omgivelser ved vandet, langt fra de store og støjende festivaler.<br><br>
-
-                    Med fællesspisning, camping og en afslappet atmosfære er der plads til både musik, fællesskab og
-                    fordybelse.
-                </p>
-            </div>
-        </div>
-
-        <div class="sektionbillede">
-            <img src="Billeder/billede2forside.png" alt="">
-        </div>
+  </div>
+  <div class="sektion">
+    <div class="sektiontekst">
+      <div class="sektion-overskrift">
+        <h2>Musik, natur og fællesskab i fokus</h2>
+      </div>
+      <div class="sektion-tekst">
+        <p>
+          En intim musikfestival med fokus på indie og alternativ musik, hvor nærvær og kvalitet er i centrum.
+          Oplev koncerter i smukke omgivelser ved vandet, langt fra de store og støjende festivaler.<br><br>
+          
+          Med fællesspisning, camping og en afslappet atmosfære er der plads til både musik, fællesskab og
+          fordybelse.
+        </p>
+      </div>
     </div>
-    <div class="lineupsektion">
-        <div class="lineup">
-            <h2>Gå på opdagelse i dette års lineup</h2>
-        </div>
-
-        <div class="lineupbilleder">
-            <img src="Billeder/detteaarslineup/b1.png" alt="">
-            <img src="Billeder/detteaarslineup/b3.png" alt="">
-        </div>
-
-        <div class="lineupbilledenederst">
-            <img src="Billeder/detteaarslineup/b2.png" alt="">
-        </div>
+    
+    <div class="sektionbillede">
+      <img src="Billeder/billede2forside.png" alt="">
     </div>
-    <div class="seneste-nyt">
-        <h2>Seneste nyt om dette års Høst Møn</h2>
+  </div>
+  <div class="lineupsektion">
+    <div class="lineup">
+      <h2>Gå på opdagelse i dette års lineup</h2>
     </div>
-    <div class="nyheder">
-        <div class="nyhed">
-            <div class="nyhed-overskrift">
-                <h3>Lineup for 2026 er offentliggjort</h3>
-            </div>
-            <button class="knap">Læs mere</button>
-        </div>
-
-        <div class="nyhed">
-            <div class="nyhed-overskrift">
-                <h3>Lineup for 2026 er offentliggjort</h3>
-            </div>
-            <button class="knap">Læs mere</button>
-        </div>
-
-        <div class="nyhed">
-            <div class="nyhed-overskrift">
-                <h3>Lineup for 2026 er offentliggjort</h3>
-            </div>
-            <button class="knap">Læs mere</button>
-        </div>
+    
+    <div class="lineupbilleder">
+      <img src="Billeder/detteaarslineup/b1.png" alt="">
+      <img src="Billeder/detteaarslineup/b3.png" alt="">
     </div>
+    
+    <div class="lineupbilledenederst">
+      <img src="Billeder/detteaarslineup/b2.png" alt="">
+    </div>
+  </div>
+  <div class="seneste-nyt">
+    <h2>Seneste nyt om dette års Høst Møn</h2>
+  </div>
+  <div class="nyheder">
+    <div class="nyhed">
+      <div class="nyhed-overskrift">
+        <h3>Lineup for 2026 er offentliggjort</h3>
+      </div>
+      <button class="knap">Læs mere</button>
+    </div>
+    
+    <div class="nyhed">
+      <div class="nyhed-overskrift">
+        <h3>Lineup for 2026 er offentliggjort</h3>
+      </div>
+      <button class="knap">Læs mere</button>
+    </div>
+    
+    <div class="nyhed">
+      <div class="nyhed-overskrift">
+        <h3>Lineup for 2026 er offentliggjort</h3>
+      </div>
+      <button class="knap">Læs mere</button>
+    </div>
+  </div>
 
-   <script>
-  const burgerToggle = document.getElementById("burger-toggle");
-  const burgerMenu = document.getElementById("burger-menu");
-  const closeBtn = document.getElementById("close-menu");
 
-  if (burgerToggle && burgerMenu) {
-    burgerToggle.addEventListener("click", () => {
-      burgerMenu.classList.toggle("active");
-    });
-  }
-
-  if (closeBtn && burgerMenu) {
-    closeBtn.addEventListener("click", () => {
-      burgerMenu.classList.remove("active");
-    });
-  }
-</script>
-
-</body>
-
-</html>
 
 <a href="kunstner">Klik her</a>
 <a href="kunstnerliste">Klik her</a>
+</Layout>
 
 <style>
 	body {
