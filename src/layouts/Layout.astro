@@ -10,13 +10,75 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <header>
-      <nav>
-        <a href="/">Hjem</a>
-        <a href="/om/">Om</a>
-        <a href="/kontakt/">Kontakt</a>
-      </nav>
+ <header class="topbar">
+        <div class="logo">
+            <img src="Billeder/670282915_3785650628231726_4077932530482168911_n.png" alt="Høst Møn">
+        </div>
+
+        <div class="burger" id="burger-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
+
+    <div class="burger-menu" id="burger-menu">
+
+        <div class="close-btn" id="close-menu">✕</div>
+
+        <div class="burger-logo-wrap">
+            <img src="Billeder/670282915_3785650628231726_4077932530482168911_n.png" alt="Høst Møn" class="burger-logo">
+        </div>
+        <nav class="burger-nav">
+            <div class="burger-link">
+                <a href="/omHøstMøn" class="burger-title">Om høst møn</a>
+                <a href="/omHøstMøn" class="burger-arrow">→</a>
+            </div>
+
+            <div class="burger-link">
+                <a href="/kunstnerliste" class="burger-title">Program</a>
+                <a href="/kunstnerliste" class="burger-arrow">→</a>
+            </div>
+
+            <div class="burger-link">
+                <a href="/kobsOversigt" class="burger-title">Køb billet</a>
+                <a href="/kobsOversigt" class="burger-arrow">→</a>
+            </div>
+
+            <div class="burger-link">
+                <a href="/festivalOversigt" class="burger-title">Festival oversigt</a>
+                <a href="/festivalOversigt" class="burger-arrow">→</a>
+            </div>
+
+            <div class="burger-link">
+                <a href="/maltid" class="burger-title">Menu</a>
+                <a href="/maltid" class="burger-arrow">→</a>
+            </div>
+
+            <div class="burger-link">
+                <a href="/arkiv" class="burger-title">Arkiv</a>
+                <a href="/arkiv" class="burger-arrow">→</a>
+            </div>
+        </nav>
+
+        <div class="burger-contact">
+            <a href="mailto:INFO@HOESTMOEN.DK" class="contact-mail">INFO@HOESTMOEN.DK</a>
+            <p>Masnedøfortet, 4760 Vordingborg.</p>
+
+            <div class="social-block">
+                <div class="find-os">Find os her</div>
+
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram">
+                        <img src="ikoner/instagram.svg" alt="Instagram">
+                    </a>
+                    <a href="#" aria-label="Facebook">
+                        <img src="ikoner/facebook.svg" alt="Facebook">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <main>
       <slot />
@@ -29,4 +91,413 @@ const { title } = Astro.props;
 </html>
 <script>
 
+</script>
+
+
+<style>
+	body {
+  margin: 0;
+  background-color: #c8d2bd;
+}
+body.menu-open {
+  overflow: hidden;
+}
+.burger-logo {
+  width: 210px;
+}
+.logo img {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+.burger-logo-wrap {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  padding: 60px 0 40px;
+  width: 100%;
+}
+/* TOPBAR */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 18px 24px;
+}
+.burger-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 10px 18px 36px;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  font-family: "Source Sans 3", sans-serif;
+}
+
+.burger-link:last-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.burger-title {
+  text-decoration: none;
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.burger-arrow {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  border-radius: 50%;
+  background-color: #a64000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.burger {
+  width: 40px;
+  height: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.burger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+  border-radius: 50px;
+}
+
+/* SIDEMENU */
+.burger-menu {
+  position: fixed;
+  top: 0;
+  right: -100%; 
+  width: 100%; 
+  height: 100vh;
+  background-color: #c8d2bd;
+  z-index: 9999;
+  transition: right 0.4s ease;
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.burger-menu.active {
+  right: 0; 
+}
+
+.burger-nav {
+  padding-top: 24px;
+}
+.close-btn {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  font-size: 28px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.burger-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 10px 18px 36px;
+  text-decoration: none;
+  color: #000;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  font-family: "Source Sans 3", sans-serif;
+}
+
+.burger-link:last-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.burger-link span {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.burger-arrow {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  border-radius: 50%;
+  background-color: #a64000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* KONTAKTOMRÅDE */
+.burger-contact {
+  text-align: center;
+  padding: 50px 20px 60px;
+}
+
+.contact-mail {
+  display: inline-block;
+  color: #000;
+  font-size: 18px;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  font-family: "Source Sans 3", sans-serif;
+}
+
+.burger-contact p {
+  margin: 0 0 28px;
+  font-size: 17px;
+  font-family: "Source Sans 3", sans-serif;
+  color: #000;
+}
+
+.social-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.find-os {
+  font-size: 18px;
+  margin: 0;
+  color: #000;
+  font-family: "Source Sans 3", sans-serif;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.forsidebilledeogh1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.overskrift {
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+.hostmonforsidebillede img {
+  display: block;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+}
+.sektionoverskrift {
+  text-align: left;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+}
+.sektion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.sektionbillede img {
+  max-width: 500px;
+  width: 100%;
+}
+.sektiontekst {
+  flex: 1;
+  max-width: 500px;
+  line-height: 1.6;
+  margin-left: 50px;
+}
+.sektion-overskrift {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.sektion-tekst {
+  font-size: 20px;
+}
+
+.lineupsektion {
+  background-color: #00393e;
+  padding-top: 50px;
+  padding-bottom: 5px;
+}
+
+.lineup {
+  text-align: center;
+  font-size: 25px;
+  margin: 0 0 -30px 0;
+  color: white;
+}
+
+.lineup h2 {
+  margin: 0;
+}
+
+.lineupbilleder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.lineupbilleder img {
+  width: 450px;
+  height: 450px;
+  object-fit: contain;
+}
+
+.lineupbilledenederst img {
+  width: 450px;
+  height: 450px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  margin-top: -100px;
+}
+.seneste-nyt {
+  color: rgb(0, 0, 0);
+  padding: 5px;
+  text-align: center;
+  font-size: 25px;
+}
+.nyhed-overskrift {
+  font-size: 20px;
+  text-align: center;
+}
+.knap {
+  background-color: #873000;
+  color: white;
+  padding: 8px 32px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+  font-family: "Mochiy Pop One", sans-serif;
+
+  transition: all 0.2s ease; 
+}
+
+.knap:hover {
+  transform: scale(1.06); 
+}
+.nyheder {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+@media (max-width: 768px) {
+  .sektion {
+    flex-direction: column;
+    text-align: center;
+  }
+  .sektiontekst {
+    margin-left: 0;
+    max-width: none;
+  }
+  .lineupsektion {
+    background-color: #00393e;
+    padding: 30px 20px 40px 20px;
+  }
+
+  .lineup {
+    text-align: center;
+    margin: 0 0 20px 0;
+  }
+
+  .lineup h2 {
+    margin: 0;
+    font-size: 28px;
+    line-height: 1.2;
+    color: white;
+  }
+
+  .lineupbilleder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .lineupbilleder img:first-child {
+    width: 300px;
+    height: auto;
+    order: 1;
+  }
+
+  .lineupbilleder img:last-child {
+    width: 300px;
+    height: auto;
+    order: 3;
+    align-self: flex-end;
+    margin-right: 20px;
+    margin-top: -10px;
+  }
+
+  .lineupbilledenederst {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: -200px;
+  }
+
+  .lineupbilledenederst img {
+    width: 300px;
+    height: auto;
+    margin: 0;
+    margin-left: 10px;
+    margin-top: 0; 
+  }
+}
+
+</style>
+
+   <script>
+  const burgerToggle = document.getElementById("burger-toggle");
+  const burgerMenu = document.getElementById("burger-menu");
+  const closeBtn = document.getElementById("close-menu");
+
+  if (burgerToggle && burgerMenu) {
+    burgerToggle.addEventListener("click", () => {
+      burgerMenu.classList.toggle("active");
+    });
+  }
+
+  if (closeBtn && burgerMenu) {
+    closeBtn.addEventListener("click", () => {
+      burgerMenu.classList.remove("active");
+    });
+  }
 </script>
