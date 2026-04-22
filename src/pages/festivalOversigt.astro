@@ -131,13 +131,30 @@ import Layout from "../layouts/Layout.astro";
   margin: 0 auto;
 }
 
+body {
+  background-color: #dae6cb;
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  background-color: #00393e;
+  color: #dae6cb;
+  font-family: "Source Sans 3", sans-serif;
+}
+
 .festivaloversigt {
- text-align: center;
-  
+  font-size: 20px;
+  text-align: center;
+  font-family: "Covered By Your Grace", sans-serif;
 }
 
 .festivaloversigt img {
   width: 100%;
+}
+
+p {
+  font-family: "Mochiy Pop One", sans-serif;
 }
 
 .fredag17 {
@@ -152,6 +169,15 @@ import Layout from "../layouts/Layout.astro";
 
 .lordag17 {
   display: none;
+}
+
+.festivalprogram h2 {
+  color: #a03900;
+  font-family: "Mochiy Pop One", sans-serif;
+}
+
+.festivalprogram h1 {
+  font-family: "Covered By Your Grace", sans-serif;
 }
 
 .tidspunkt {
@@ -199,6 +225,9 @@ import Layout from "../layouts/Layout.astro";
     display: none;
   }
 
- 
+  h1 {
+    font-size: 50px;
+  }
 }
+
 </style>
