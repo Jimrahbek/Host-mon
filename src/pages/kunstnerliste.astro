@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import artistliste from "../components/artisterliste.astro";
-import "../style/global.css";
 
 const url = `${import.meta.env.SUPABASE_URL}/rest/v1/Artister?select=*`;
 const apiKey = import.meta.env.SUPABASE_PUBLISHABLE_KEY;
