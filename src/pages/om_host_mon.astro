@@ -1,22 +1,8 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=, initial-scale=1.0" />
-    <meta name="robot" content="noindex, nofollow" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
-    <link rel="stylesheet" href="global_style.css" />
-    <link rel="stylesheet" href="ny_style.css" />
-    <link rel="stylesheet" href="om_host_mon.css" />
-    <title>Om Høst Møn</title>
-  </head>
-  <body>
-    <header>
-      <div class="topnav">
-        <a href="index.html" class="logo"> <img src="img/logo_host_mon.png" alt="Høst Møn logo" /> </a>
-      </div>
-    </header>
-    <main>
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+  <Layout>
       <h1>Om Høst Møn</h1>
 
       <section class="om_host_mon_section">
@@ -53,18 +39,10 @@
           <p>Frivillig: frivillig@hoestmoen.dk</p>
         </div>
       </section>
-    </main>
-    <footer>
-      <p class="footer_adresse">Fortvej 8, 4760, Vordingborg.</p>
-      <div class="footer_social_media">
-        <a href="https://www.facebook.com/hoestmoen" target="_blank">Facebook</a>
-        <a href="https://www.instagram.com/hoestmoen/" target="_blank">Instagram</a>
-      </div>
-      <p class="footer_mail">info@hoestmoen.dk</p>
-    </footer>
-  </body>
-</html>
 
+  
+
+</Layout>
 <style>
 .om_host_mon_section {
   display: grid;
