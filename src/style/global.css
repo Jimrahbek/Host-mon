@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Candal&family=Comfortaa:wght@300..700&family=Covered+By+Your+Grace&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Jura:wght@300..700&family=Mochiy+Pop+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Syncopate:wght@400;700&display=swap");
+
+:root {
+  --baggrund: #dae6cb;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--baggrund);
+}
+
+body {
+  background-color: var(--baggrund);
+}
+
+h1 {
+  font-family: "Covered By Your Grace", cursive;
+  font-size: 100px;
+  font-weight: 200;
+}
+
+h2 {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-size: 45px;
+}
+
+h3 {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 35px;
+}
+
+p {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 20px;
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 60px;
+  }
+  h2 {
+    font-size: 30px;
+    font-weight: 500;
+  }
+  h3 {
+    font-size: 25px;
+  }
+  p {
+    font-size: 22px;
+  }
+}
