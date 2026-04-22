@@ -4,10 +4,7 @@ import Layout from "../layouts/Layout.astro";
 
 ---
 <layout>
-</layout>
-<body>
-    <main>
-        <div class="festivaloversigt">
+<div class="festivaloversigt">
             <h1 class="festivaloversigt ">Festival oversigt</h1>
             <img src="/img/festivaloversigt.webp" alt="oversigt">
         </div>
@@ -31,7 +28,9 @@ import Layout from "../layouts/Layout.astro";
                     <p>Miaw</p>
                 </div>
 
-                <h2>LØRDAG 29. august:</h2>
+                <h2 class="lordag">LØRDAG 29. august:</h2>
+
+                <h1 class="ekkomobil">SKOVSCENEN: EKKO</h1>
                 <div class="tidspunkt">
                     <p>16:00 - 18:00</p>
                     <p>Boko Yout (S)</p>
@@ -48,10 +47,13 @@ import Layout from "../layouts/Layout.astro";
 
 
             <div class="ekko">
-                <h1>SKOVSCENEN: EKKO</h1>
+                <h2 class="lordagmobil">LØRDAG 29. august:</h2>
+                <h1 class="ekkodesktop">HOVEDSCENEN: BLØGEN</h1>
 
                 <h2 class="fredag17">FREDAG 28. august:</h2>
+                <h1 class="blogenmobil">HOVEDSCENEN: BLØGEN</h1>
                 <div class="tidspunkt">
+
                     <p>17:00 - 19:00</p>
                     <p>Papa Bues Viking Jazzband</p>
                 </div>
@@ -65,6 +67,7 @@ import Layout from "../layouts/Layout.astro";
                 </div>
 
                 <h2 class="lordag17">LØRDAG 29. august:</h2>
+                <h1 class="ekkodmobil1">SKOVSCENEN: EKKO</h1>
                 <div class="tidspunkt">
                     <p>17:00 - 19:00</p>
                     <p>De tabte småkager</p>
@@ -80,55 +83,99 @@ import Layout from "../layouts/Layout.astro";
             </div>
 
         </div>
-    </main>
-</body>
-<footer>
-    <p class="fortvej">Fortvej 8, 4760, Vordingborg</p>
-    <p class="infohost">info@hoestmoen.dk</p>
-</footer>
-
-
-
-
-
-
-</html>
+</layout>
 <style>
-    .festivalprogram {
+@media (max-width: 768px) {
+  .festivalprogram {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .blogen,
+  .ekko {
+    display: contents;
+  }
+
+  .fredag {
+    order: -2;
+  }
+
+  .fredag17 {
+    order: -2;
+    display: block;
+  }
+
+  .lordag {
+    display: none;
+    margin-top: 30px;
+  }
+
+  .lordag17 {
+    order: 10;
+    display: block;
+    margin-top: 30px;
+  }
+
+  .festivalprogram h2 {
+    margin-top: 30px;
+  }
+
+  .ekkodesktop {
+    display: none;
+  }
+}
+
+.festivalprogram {
   max-width: 430px;
   margin: 0 auto;
 }
+
 body {
   background-color: #dae6cb;
   margin: 0;
   padding: 0;
 }
+
 footer {
   background-color: #00393e;
   color: #dae6cb;
   font-family: "Source Sans 3", sans-serif;
 }
+
 .festivaloversigt {
   font-size: 20px;
   text-align: center;
   font-family: "Covered By Your Grace", sans-serif;
 }
-p {
-  font-family: "Mochiy Pop One", sans-serif;
-}
+
 .festivaloversigt img {
   width: 100%;
 }
+
+p {
+  font-family: "Mochiy Pop One", sans-serif;
+}
+
 .fredag17 {
   display: none;
 }
+
+.fredag {
+  display: flex;
+  flex-direction: column;
+  order: -1;
+}
+
 .lordag17 {
   display: none;
 }
+
 .festivalprogram h2 {
   color: #a03900;
   font-family: "Mochiy Pop One", sans-serif;
 }
+
 .festivalprogram h1 {
   font-family: "Covered By Your Grace", sans-serif;
 }
@@ -136,7 +183,7 @@ p {
 .tidspunkt {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 @media (min-width: 1024px) {
@@ -145,32 +192,41 @@ p {
     height: auto;
     display: block;
   }
+
   .festivaloversigt {
     font-size: 64px;
-    text-align: center;
-    font-family: "Covered By Your Grace", sans-serif;
   }
+
   .festivalprogram {
     max-width: 1000px;
-
+    padding: 90px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
   }
-  .festivalprogram h1,
-  .festivalprogram h2 {
-    grid-column: 1 / -1;
-  }
+
   .tidspunkt {
-    display: grid;
     grid-template-columns: 1fr 2fr;
   }
+
   .fredag17 {
     display: block;
   }
+
   .lordag17 {
     display: block;
   }
-}
 
+  .blogenmobil {
+    display: none;
+  }
+
+  .lordagmobil {
+    display: none;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+}
 </style>
