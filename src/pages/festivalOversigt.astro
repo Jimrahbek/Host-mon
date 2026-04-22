@@ -12,10 +12,9 @@ import Layout from "../layouts/Layout.astro";
 
 
             <div class="blogen">
-                <h1>HOVEDSCENEN: BLØGEN</h1>
-
-                <h2 class="fredag">FREDAG 28. august:</h2>
-                <div class="tidspunkt">
+                 <h2 class="fredag">FREDAG 28. august:</h2>
+              <h2>HOVEDSCENEN: BLØGEN</h2>
+<div class="tidspunkt">
                     <p>16:00 - 18:00</p>
                     <p>Spawner</p>
                 </div>
@@ -29,7 +28,7 @@ import Layout from "../layouts/Layout.astro";
                 </div>
 
 
-                <h1 class="ekkomobil">SKOVSCENEN: EKKO</h1>
+                <h2 class="ekkomobil">SKOVSCENEN: EKKO</h2>
                 <div class="tidspunkt">
                     <p>16:00 - 18:00</p>
                     <p>Boko Yout (S)</p>
@@ -46,8 +45,9 @@ import Layout from "../layouts/Layout.astro";
 
 
             <div class="ekko">
-                <h1 class="ekkodesktop">HOVEDSCENEN: BLØGEN</h1>
                 <h2 class="lordagmobil">LØRDAG 29. august:</h2>
+              <h2 class="ekkodesktop">HOVEDSCENEN: BLØGEN</h2>
+               
 
                 <div class="tidspunkt">
 
@@ -64,7 +64,7 @@ import Layout from "../layouts/Layout.astro";
                 </div>
 
 
-                <h1 class="ekkodmobil1">SKOVSCENEN: EKKO</h1>
+                <h2 class="ekkodmobil1">SKOVSCENEN: EKKO</h2>
                 <div class="tidspunkt">
                     <p>17:00 - 19:00</p>
                     <p>De tabte småkager</p>
@@ -94,25 +94,14 @@ import Layout from "../layouts/Layout.astro";
     display: contents;
   }
 
-  .fredag {
-    order: -2;
-  }
-
-  .fredag17 {
-    order: -2;
-    display: block;
-  }
+ 
 
   .lordag {
     display: none;
     margin-top: 30px;
   }
 
-  .lordag17 {
-    order: 10;
-    display: block;
-    margin-top: 30px;
-  }
+  
 
   .festivalprogram h2 {
     margin-top: 30px;
@@ -128,34 +117,18 @@ import Layout from "../layouts/Layout.astro";
   margin: 0 auto;
 }
 
-body {
-  background-color: #dae6cb;
-  margin: 0;
-  padding: 0;
-}
-
-footer {
-  background-color: #00393e;
-  color: #dae6cb;
-  font-family: "Source Sans 3", sans-serif;
-}
-
 .festivaloversigt {
-  font-size: 20px;
-  text-align: center;
-  font-family: "Covered By Your Grace", sans-serif;
-}
+ text-align: center;
+ }
 
 .festivaloversigt img {
   width: 100%;
 }
-.ekkodesktop {
-  order: -2;
-}
-p {
-  font-family: "Mochiy Pop One", sans-serif;
-}
 
+
+.lordagmobil{
+  color:#873000;
+ }
 .fredag17 {
   display: none;
 }
@@ -164,20 +137,10 @@ p {
   display: flex;
   flex-direction: column;
   order: -1;
+  color: #873000;
 }
 
-.lordag17 {
-  display: none;
-}
 
-.festivalprogram h2 {
-  color: #a03900;
-  font-family: "Mochiy Pop One", sans-serif;
-}
-
-.festivalprogram h1 {
-  font-family: "Covered By Your Grace", sans-serif;
-}
 
 .tidspunkt {
   display: grid;
@@ -192,13 +155,9 @@ p {
     display: block;
   }
 
-  .festivaloversigt {
-    font-size: 64px;
-  }
-
   .festivalprogram {
     max-width: 1000px;
-    padding: 90px;
+    padding: 100px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
@@ -206,22 +165,19 @@ p {
 
   .tidspunkt {
     grid-template-columns: 1fr 2fr;
+  
   }
 
   .fredag17 {
     display: block;
   }
 
-  .lordag17 {
-    display: block;
-  }
+  
 
   .blogenmobil {
     display: none;
   }
 
-  h1 {
-    font-size: 50px;
-  }
+  
 }
 </style>
