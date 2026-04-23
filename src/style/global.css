@@ -106,20 +106,16 @@ footer {
   text-align: center;
   background-color: var(--color-primary);
   width: 100%;
-  position: fixed;
   left: 0;
   bottom: 0;
 }
 
 .footer_adresse {
-  text-align: bottom;
   justify-self: right;
-  padding: 0, 5rem;
   color: var(--color-text-light);
 }
 
 .footer_social_media {
-  text-align: bottom;
   justify-self: center;
   padding: 1rem;
   width: 100%;
@@ -127,9 +123,7 @@ footer {
 }
 
 .footer_mail {
-  text-align: bottom;
   justify-self: left;
-  padding: 0, 5rem;
   color: var(--color-text-light);
 }
 

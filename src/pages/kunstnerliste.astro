@@ -15,123 +15,94 @@ const data = await fetch(url, options).then(res => res.json());
 ---
 
 <Layout>
-  <section class="lineup-page">
-    <div class="lineup-header">
-      <h1>Line-up for 2026</h1>
-      <p class="info">
-        På Høst Møn kan du opleve stemningsfulde koncerter, nærværende musikoplevelser,
-        hyggelige fællesskaber og spændende kunstnere – både etablerede navne og nye
-        talenter – samlet i de smukke omgivelser på Møn.
-      </p>
-      <p class="info">
-        Vi offentliggør hermed programmet for Høst Møn 2026. Se hvilke artister og
-        oplevelser, du allerede nu kan begynde at glæde dig til her
-      </p>
-    </div>
+    <div class="luft">
+    <div class="title">
+      <h1>Lineup</h1>
+      <p class="info">På Høst Møn kan du opleve stemningsfulde koncerter, nærværende musikoplevelser, hyggelige fællesskaber og spændende kunstnere både etablerede navne og nye talenter – samlet i de smukke omgivelser på Møn.
+Vi offentliggør hermed programmet for Høst Møn 2026. Se hvilke artister og oplevelser, du allerede nu kan begynde at glæde dig til her</p>
+</div>
 
-    <div class="timeline">
-      {data.map((artist: any) => (
-        <a href={`/kunstnere/${artist.id}`} class="item">
-          <div class="img-wrapper">
-            <img src={`/${artist.billede}`} alt={artist.navn} />
-          </div>
-          <h3 class="artist-name">{artist.navn}</h3>
-        </a>
-      ))}
-    </div>
-  </section>
+<div class="timeline">
+  {data.map((artist: any) => (
+    <a href={`/kunstnere/${artist.id}`} class="item">
+        <div class="img-wrapper">
+    <img src={`/${artist.billede}`} alt="" />
+  </div>
+      <h1 class="pad">{artist.navn}</h1>
+    </a>
+  ))}
+</div>
+</div>
 </Layout>
 
     <style>
-.lineup-page {
-  width: min(1120px, calc(100% - 3rem));
-  margin: 0 auto;
-  padding: 1.5rem 0 4rem;
-}
-
-.lineup-header {
-  max-width: 520px;
-  margin: 0 auto 3rem;
-  text-align: center;
-}
-
-.lineup-header h1 {
-  margin: 0 0 1rem;
-}
-
-.info {
-  margin: 0;
-  font-size: 1rem;
-  line-height: 1.65;
-}
-
-.info + .info {
-  margin-top: 0.75rem;
-}
-
-.timeline {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  column-gap: 3rem;
-  row-gap: 2.5rem;
-  align-items: start;
-}
-
-.item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;   /* <-- vigtig */
-  text-decoration: none;
+.item{
+      text-decoration: none;
   color: inherit;
 }
 
 .img-wrapper {
-  width: 100%;
+  height: 300px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden; 
 }
-
 .img-wrapper img {
+  max-height: 100%;  
+  width: auto;
+  max-width: 100%;
   display: block;
-  width: min(100%, 260px);
+}
+
+.luft{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.pad{
+    padding-top: 10px;
+     padding-left: 30px; 
+     text-align: center;    
+}
+
+.title{
+  display: flex;              
+  flex-direction: column;
+  align-items: center;        
+  text-align: center; 
+}
+
+.timeline {
+    display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.info{
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 40%;
+}
+
+.timeline img {
+  width: 100%;
+  max-width: 800px;   
   height: auto;
-  object-fit: contain;
+  display: block;
 }
 
-.artist-name {
-  margin: 1rem 0 0;
-  font-family: "Covered By Your Grace", cursive;
-  font-size: clamp(2rem, 3vw, 3rem);
-  font-weight: 400;
-  line-height: 1;
-  text-align: left;
-}
-
+/* mobile */
 @media (max-width: 768px) {
-  .lineup-page {
-    width: min(100%, calc(100% - 1.5rem));
-    padding: 1rem 0 3rem;
-  }
-
-  .lineup-header {
-    max-width: 100%;
-    margin-bottom: 2rem;
-  }
-
   .timeline {
-    grid-template-columns: 1fr 1fr;
-    column-gap: 1.5rem;
-    row-gap: 2rem;
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
-
-  .img-wrapper img {
-    width: min(100%, 220px);
-  }
-
-  .artist-name {
-    font-size: clamp(1.7rem, 5vw, 2.3rem);
-    margin-top: 0.75rem;
-  }
+  .info{
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 80%;
+}
 }
     </style>
