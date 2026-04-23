@@ -1,20 +1,268 @@
 ---
-
+import "../style/global.css";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+    <article class="forsidebilledeogh1">
+        <div class="overskrift">
+            <h1>Tæt på naturen, tæt på musikken.</h1>
+        </div>
 
-<a href="kunstner">Klik her</a>
-<a href="kunstnerliste">Klik her</a>
+        <div class="hostmonforsidebillede">
+            <img src="/billeder/hostmonforside.png" alt="Høst Møn">
+        </div>
+    </article>
+    <article class="sektion">
+        <section class="sektiontekst">
+            <div class="sektion-overskrift">
+                <h2>Musik, natur og fællesskab i fokus</h2>
+            </div>
+            <div class="sektion-tekst">
+                <p>
+                    En intim musikfestival med fokus på indie og alternativ musik, hvor nærvær og kvalitet er i centrum.
+                    Oplev koncerter i smukke omgivelser ved vandet, langt fra de store og støjende festivaler.<br><br>
+
+                    Med fællesspisning, camping og en afslappet atmosfære er der plads til både musik, fællesskab og
+                    fordybelse.
+                </p>
+            </div>
+        </section>
+
+        <div class="sektionbillede">
+            <img src="billeder/musikifokus.png" alt="Høst Møn">
+        </div>
+    </article>
+    <article class="lineupsektion">
+        <div class="lineup">
+            <h2>Gå på opdagelse i dette års lineup</h2>
+        </div>
+
+        <div class="lineupbilleder">
+            <img src="billeder/b1.png" alt="bandbillede af Snuggle">
+            <img src="billeder/b2.png" alt="Indengangen til Høst Møn, godt befolketet">
+        </div>
+
+        <div class="lineupbilledenederst">
+            <img src="billeder/b3.png" alt="bandbillede af Boko Yout">
+        </div>
+    </article>
+    <div class="seneste-nyt">
+        <h2>Seneste nyt om dette års Høst Møn</h2>
+    </div>
+    <article class="nyheder">
+        <div class="nyhed">
+          
+            <div class="nyhed-overskrift">
+                <h3>Lineup for 2026 er offentliggjort</h3>
+            </div>
+            <button class="knap">Læs mere</button>
+        </div>
+
+        <div class="nyhed">
+            <div class="nyhed-overskrift">
+                <h3>Din guide til festivalen</h3>
+            </div>
+            <button class="knap">Læs mere</button>
+        </div>
+
+        <div class="nyhed">
+            <div class="nyhed-overskrift">
+                <h3>Billetsalget er åbnet – sikr din plads nu</h3>
+            </div>
+            <button class="knap">Læs mere</button>
+        </div>
+    </article>
+</Layout>
+
+<style>
+
+.forsidebilledeogh1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.overskrift {
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+.hostmonforsidebillede img {
+  display: block;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+}
+.sektionoverskrift {
+  text-align: left;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+}
+.sektion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.sektionbillede img {
+  max-width: 500px;
+  width: 100%;
+}
+.sektiontekst {
+  flex: 1;
+  max-width: 500px;
+  line-height: 1.6;
+  margin-left: 50px;
+}
+.sektion-overskrift {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.sektion-tekst {
+  font-size: 20px;
+}
+
+.lineupsektion {
+  background-color: var(--color-primary);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 100%;
+}
+
+.lineup {
+  text-align: center;
+  font-size: 25px;
+  margin: 0 0 -30px 0;
+  color: white;
+}
+
+.lineup h2 {
+  margin: 0;
+  color: var(--color-text-light);
+}
+
+.lineupbilleder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.lineupbilleder img {
+  width: 450px;
+  height: 450px;
+  object-fit: contain;
+}
+
+.lineupbilledenederst img {
+  width: 450px;
+  height: 450px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  margin-top: -100px;
+}
+.seneste-nyt {
+  color: rgb(0, 0, 0);
+  padding: 5px;
+  text-align: center;
+  font-size: 25px;
+}
+.nyhed-overskrift {
+  font-size: 20px;
+  text-align: center;
+}
+.knap {
+  background-color: var(--color-cta);
+  color: var(--color-text-light);
+  padding: 8px 32px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+  font-family: "Mochiy Pop One", sans-serif;
+
+  transition: all 0.2s ease; 
+}
+
+.knap:hover {
+  transform: scale(1.06); 
+}
+.nyheder {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+.seneste-nyt {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 60px; 
+}
+@media (max-width: 768px) {
+  .sektion {
+    flex-direction: column;
+    text-align: center;
+  }
+  .sektiontekst {
+    margin-left: 0;
+    max-width: none;
+  }
+  .lineupsektion {
+    background-color: var(--color-primary);
+    padding: 30px 20px 40px 20px;
+  }
+
+  .lineup {
+    text-align: center;
+    margin: 0 0 20px 0;
+  }
+
+  .lineup h2 {
+    margin: 0;
+    font-size: 28px;
+    line-height: 1.2;
+    color: var(--color-text-light);
+  }
+
+  .lineupbilleder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .lineupbilleder img:first-child {
+    width: 300px;
+    height: auto;
+    order: 1;
+  }
+
+  .lineupbilleder img:last-child {
+    width: 300px;
+    height: auto;
+    order: 3;
+    align-self: flex-end;
+    margin-right: 20px;
+    margin-top: -10px;
+  }
+
+  .lineupbilledenederst {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: -200px;
+  }
+
+  .lineupbilledenederst img {
+    width: 300px;
+    height: auto;
+    margin: 0;
+    margin-left: 10px;
+    margin-top: 0; 
+  }
+}
+
+</style>

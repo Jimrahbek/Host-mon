@@ -1,31 +1,407 @@
 ---
+import "../style/global.css"
 const { title } = Astro.props;
 ---
 <!DOCTYPE html>
 <html lang="da">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"
+    <meta name="robot" content="noindex, nofollow" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
+    <link rel="stylesheet" href="src/style/global.css">
+  
     <title>{title}</title>
   </head>
   <body>
-    <header>
-      <nav>
-        <a href="/">Hjem</a>
-        <a href="/om/">Om</a>
-        <a href="/kontakt/">Kontakt</a>
-      </nav>
+ <header class="topbar">
+        <div class="logo">
+            <a href="/">
+                <img src="billeder/670282915_3785650628231726_4077932530482168911_n.png" alt="Høst Møn">
+            </a>
+        </div>
+
+        <div class="burger" id="burger-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
+
+    <div class="burger-menu" id="burger-menu">
+
+        <div class="close-btn" id="close-menu">✕</div>
+
+        <div class="burger-logo-wrap">
+            <a href="/">
+                <img src="billeder/670282915_3785650628231726_4077932530482168911_n.png" alt="Høst Møn" class="burger-logo">
+            </a>
+        </div>
+        <nav class="burger-nav">
+            <div class="burger-link">
+                <a href="/om_host_mon" class="burger-title">Om Høst Møn</a>
+                <a href="/om_host_mon" class="burger-arrow">→</a>
+            </div>
+
+            <div class="burger-link">
+                <a href="/kunstnerliste" class="burger-title">Program</a>
+                <a href="/kunstnerliste" class="burger-arrow">→</a>
+            </div>
+
+            <div class="burger-link">
+                <a href="/kobsOversigt" class="burger-title">Køb billet</a>
+                <a href="/kobsOversigt" class="burger-arrow">→</a>
+            </div>
+
+            <div class="burger-link">
+                <a href="/festivalOversigt" class="burger-title">Festival oversigt </a>
+                <a href="/festivalOversigt" class="burger-arrow">→</a>
+            </div>
+
+            <div class="burger-link">
+                <a href="/maaltidet" class="burger-title">Menu </a>
+                <a href="/maaltidet" class="burger-arrow">→</a>
+            </div>
+
+            <div class="burger-link">
+                <a href="/arkiv" class="burger-title">Arkiv</a>
+                <a href="/arkiv" class="burger-arrow">→</a>
+            </div>
+        </nav>
+
+        <div class="burger-contact">
+            <a href="mailto:INFO@HOESTMOEN.DK" class="contact-mail">INFO@HOESTMOEN.DK</a>
+            <p>Masnedøfortet, 4760 Vordingborg.</p>
+
+            <div class="social-block">
+                <div class="find-os">Find os her</div>
+
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram">
+                        <img src="billeder/IG.png" alt="Instagram">
+                    </a>
+                    <a href="#" aria-label="Facebook">
+                        <img src="billeder/fblogo.png" alt="Facebook">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <main>
       <slot />
     </main>
 
     <footer>
-      
+      <p class="footer_adresse">Fortvej 8, 4760, Vordingborg.</p>
+      <div class="footer_social_media">
+       <a href="https://www.facebook.com/hoestmoen">
+       <img src="billeder/FB.png"> </a>
+
+        <a href="https://www.instagram.com/hoestmoen/"> <img src="billeder/IG.png"></a>
+      </div>
+      <p class="footer_mail">info@hoestmoen.dk</p>
     </footer>
   </body>
 </html>
 <script>
 
+</script>
+
+
+<style>
+
+
+/*********************** Footer *****************/
+footer {
+  background-color: #2c3e50; 
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  color: var(--color-text-light);
+  text-decoration: none;
+}
+
+/************  Footer *************/
+footer {
+  width: 100%;
+  background-color: #00393E;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 1.25rem 2rem;
+  box-sizing: border-box;
+}
+
+.footer_adresse {
+  justify-self: start;
+  margin: 0;
+}
+
+.footer_social_media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0;
+  width: auto;
+}
+
+.footer_social_media img {
+  display: block;
+  width: 42px;
+  height: 42px;
+  margin: 0;
+}
+
+.footer_mail {
+  justify-self: end;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  footer {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    text-align: center;
+    padding: 1.5rem 1rem;
+  }
+
+  .footer_adresse,
+  .footer_mail,
+  .footer_social_media {
+    justify-self: center;
+  }
+}
+	body {
+  margin: 0;
+  background-color: #c8d2bd;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+.burger-logo {
+  width: 210px;
+}
+.logo img {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+.burger-logo-wrap {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  padding: 60px 0 40px;
+  width: 100%;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 18px 24px;
+}
+.burger-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 10px 18px 36px;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  font-family: "Source Sans 3", sans-serif;
+}
+
+.burger-link:last-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.burger-title {
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.burger-arrow {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  border-radius: 50%;
+  background-color: var(--color-cta);
+  color: var(--color-text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.burger {
+  width: 40px;
+  height: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.burger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-text);
+  border-radius: 50px;
+}
+
+
+.burger-menu {
+  position: fixed;
+  top: 0;
+  right: -100%; 
+  width: 100%; 
+  height: 100vh;
+  background-color: var(--baggrund);
+  z-index: 9999;
+  transition: right 0.4s ease;
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.burger-menu.active {
+  right: 0; 
+}
+
+.burger-nav {
+  padding-top: 24px;
+}
+.close-btn {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  font-size: 28px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.burger-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 10px 18px 36px;
+  text-decoration: none;
+  color: var(--color-text);
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  font-family: "Source Sans 3", sans-serif;
+}
+
+.burger-link:last-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.burger-link span {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.burger-arrow {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  border-radius: 50%;
+  background-color: var(--color-cta);
+  color: var(--color-text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* KONTAKTOMRÅDE */
+.burger-contact {
+  text-align: center;
+  padding: 50px 20px 60px;
+}
+
+.contact-mail {
+  display: inline-block;
+  color: var(--color-text);
+  font-size: 18px;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  font-family: "Source Sans 3", sans-serif;
+}
+
+.burger-contact p {
+  margin: 0 0 28px;
+  font-size: 17px;
+  font-family: "Source Sans 3", sans-serif;
+  color: var(--color-text);
+}
+
+.social-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.find-os {
+  font-size: 18px;
+  margin: 0;
+  color: var(--color-text);
+  font-family: "Source Sans 3", sans-serif;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+
+
+
+</style>
+
+<style>
+</style>
+
+<script>
+const burger = document.getElementById("burger-toggle");
+const menu = document.getElementById("burger-menu");
+const closeBtn = document.getElementById("close-menu");
+
+if (burger && menu && closeBtn) {
+  burger.addEventListener("click", () => {
+    menu.classList.add("active");
+    document.body.classList.add("menu-open");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    menu.classList.remove("active");
+    document.body.classList.remove("menu-open");
+  });
+}
 </script>

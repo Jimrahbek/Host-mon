@@ -5,21 +5,18 @@ const { artister } = Astro.props;
 function formatSpilletid(value) {
   if (!value) return "";
 
-  let dateString = value;
-  if (typeof dateString === "string" && dateString.includes(" ") && !dateString.includes("T")) {
-    dateString = dateString.replace(" ", "T");
-  }
+  const date = new Date(value);
+  if (isNaN(date)) return value;
 
-  const date = new Date(dateString);
-  if (Number.isNaN(date.getTime())) return value;
-
-  const day = date.getDate();
-  const month = date.toLocaleString("da-DK", { month: "long" });
-  const hours = String(date.getHours()).padStart(2, "0");
-  const minutes = String(date.getMinutes()).padStart(2, "0");
-
-  return `${day}. ${month} kl ${hours}:${minutes}`;
+  return date.toLocaleString("da-DK", {
+    weekday: "long",   // ugedag
+    day: "numeric",
+    month: "long",
+    hour: "2-digit",
+    minute: "2-digit"
+  }).replace(",", " kl");
 }
+
 ---
 <div class="style">
 <div class="content-left">
@@ -28,17 +25,40 @@ function formatSpilletid(value) {
 <div class="content-right">
 <img class="navn" src={`/${artister.navnSvg}`} alt="" />
 <img class="pic-mobile" src={`/${artister.billede}`} alt="">
-<h2>{formatSpilletid(artister.spilletid)}</h2>
-<p>{artister.artistbeskrivelse}</p>
+<h2>{formatSpilletid(artister.spilletid)}</h2> 
+<p class="pTekst">{artister.artistbeskrivelse}</p>
+<p class="pTekst">{artister.artistbeskrivelse2}</p>
+<p class="pTekst">{artister.artistbeskrivelse3}</p>
+<p class="pTekst">{artister.artistbeskrivelse4}</p>
 <h3>{artister.overskrift}</h3>
-<a href={artister.spotify}target="_blank" >
-  <img src="/billeder/spotify.svg" alt="spotify">
-  <a href={artister.instagram}target="_blank" >
-  <img src="/billeder/instagram.svg" alt="spotify">
+<div class="icons">
+  <a href={artister.spotify} target="_blank">
+    <img src="/billeder/spotify.svg" alt="spotify">
+  </a>
+
+  <a href={artister.instagram} target="_blank">
+    <img src="/billeder/instagram.svg" alt="instagram">
+  </a>
+</div>
 </a>
 </div>
 </div>
 <style>
+.icons {
+  display: flex;
+  gap: 10px; 
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.icons img {
+  width: 50px; 
+  height: auto;
+}
+    
+    .pTekst{
+        width: 569px;
+    }
 .style img.pic {
   width: 100%;
   max-width: 800px;   
@@ -53,7 +73,7 @@ function formatSpilletid(value) {
 .style{
         display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10%;
+  gap: 20px;
   flex-direction: column;
   align-items: center; 
   padding-left: 5%;
@@ -65,7 +85,7 @@ function formatSpilletid(value) {
 @media (max-width: 768px) {
   .style {
     grid-template-columns: 1fr;
-    gap: 2%;
+    gap: 10px;
   }
 
   .content-left {

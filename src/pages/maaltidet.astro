@@ -1,0 +1,336 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <div class="maaltidet_page">
+    <div class="maaltidet_overskrift">
+      <h1>Måltidet</h1>
+    </div>
+
+    <section class="maaltidet_section">
+      <div class="maaltidet_overskrift_1">
+        <h2>Fællesspisning</h2>
+      </div>
+
+      <div class="maaltidet_tekst_1">
+        <p>
+          Høst Møn er andet og meget mere end koncerter med havudsigt, dansefest
+          under åben himmel og camping med træk&slip. Det er også en fest, der
+          kredser – og kræser – om det fælles måltid, og Høst Møns Madjunta har
+          udfoldet nedenstående manifest for måltidet på Høst Møn. Den store
+          fællesmiddag lørdag er inkluderet i billetprisen. Alle andre måltider
+          sælges separat på pladsen, og der er både vegetariske og veganske
+          muligheder.
+        </p>
+
+        <p>
+          Her er måltidet ikke bare noget, der stiller sulten. Det er et
+          samlingspunkt. Et sted, hvor fremmede bliver til fæller, hvor samtaler
+          opstår på tværs af borde, og hvor tempoet sættes ned, så der er plads
+          til både smag, nærvær og nysgerrighed.
+        </p>
+      </div>
+
+      <div class="maaltidet_billede_1">
+        <img src="billeder/musikifokus.png" alt="Måltid på Høst Møn" />
+      </div>
+
+      <div class="maaltidet_billede_2">
+        <img src="billeder/maaltidet_1.png" alt="Fællesspisning på Høst Møn" />
+      </div>
+
+      <div class="maaltidet_overskrift_2">
+        <h2>Råvarerne</h2>
+
+        <p>
+          Råvarerne er valgt med omtanke – så lokalt og sæsonbaseret som muligt
+          – og tilberedt med respekt for både naturen og de mennesker, der har
+          dyrket, høstet og forvandlet dem. Madjuntaens manifest hylder
+          enkelheden og fællesskabet: at vi spiser det samme, deler det samme og
+          oplever det samme. At måltidet er en pause fra programmet, men også en
+          del af det. At bæredygtighed ikke er et buzzword, men en praksis – i
+          alt fra portionsstørrelser til service og affald.
+        </p>
+
+        <p>
+          På Høst Møn er måltidet en invitation. Til at sætte sig ned. Til at
+          række fadet videre. Til at smage noget nyt. Og måske vigtigst af alt:
+          til at være sammen.
+        </p>
+      </div>
+
+      <div class="maaltidet_billede_3">
+        <img src="billeder/maaltidet_3.png" alt="Menu og måltider på Høst Møn" />
+      </div>
+    </section>
+
+    <section class="maaltidet_faellesspisning">
+      <article class="maaltidet_faellesspisning_section">
+        <div class="menu_heading">
+          <h2>Menu</h2>
+        </div>
+
+        <div class="maaltidet_faellesspisning_fredag">
+          <h3 class="dag">28 august:</h3>
+
+          <div class="meal_block">
+            <h4>Morgenmad</h4>
+            <p class="tid">kl:08:00 til 09:00</p>
+            <p>Hjemmebagte krydderboller med ost og pålæg, samt overgryn og musli.</p>
+          </div>
+
+          <div class="meal_block">
+            <h4>Frokost</h4>
+            <p class="tid">kl:13:00 til 15:00</p>
+            <p>Forloren skildpadde og ribbensteg, med kirsebær sauce og trøffel is.</p>
+          </div>
+
+          <div class="meal_block">
+            <h4>Aftensmad</h4>
+            <p class="tid">kl:18:00 til 21:00</p>
+            <p>Hjemmebagt pizza, med mulighed for selv at bage og vælge fyld.</p>
+          </div>
+
+          <div class="meal_block">
+            <h4>Natmad</h4>
+            <p class="tid">kl:00:00 til 02:00</p>
+            <p>Hotdogs og pølsehorn.</p>
+          </div>
+        </div>
+
+        <div class="maaltidet_faellesspisning_lordag">
+          <h3 class="dag">29 august:</h3>
+
+          <div class="meal_block">
+            <h4>Morgenmad</h4>
+            <p class="tid">kl:08:00 til 09:00</p>
+            <p>Havregryn høstet direkte fra marken og hindbær og blåbær fra den dybe skov.</p>
+          </div>
+
+          <div class="meal_block">
+            <h4>Frokost</h4>
+            <p class="tid">kl:13:00 til 15:00</p>
+            <p>Grillet vandmelon med miso, ristet boghvede og syltede hyben.</p>
+          </div>
+
+          <div class="meal_block">
+            <h4>Aftensmad</h4>
+            <p class="tid">kl:18:00 til 21:00</p>
+            <p>Kartoffelis med brunet smør, tang og sprød rug.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+  </div>
+</Layout>
+
+<style>
+    /************** Måltidet *********************/
+/************** Måltidet *********************/
+.maaltidet_page {
+  background-color: var(--color-bg);
+}
+
+.maaltidet_overskrift {
+  text-align: center;
+  padding: 5rem 1rem 3rem;
+}
+
+.maaltidet_overskrift h1 {
+  margin: 0;
+  font-size: clamp(3rem, 6vw, 6rem);
+  line-height: 1;
+}
+.maaltide_section > * {
+  margin: 0 auto;
+}
+
+.maaltidet_section {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 2rem 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem 4rem;
+  align-items: center;
+}
+
+.maaltidet_section > * {
+  margin: 0;
+}
+
+.maaltidet_section h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 3vw, 4rem);
+  line-height: 1.05;
+}
+
+.maaltidet_section p {
+  margin: 0 0 1.5rem;
+  font-size: 1.35rem;
+  line-height: 1.6;
+  max-width: 62ch;
+}
+
+.maaltidet_section img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+/************ Grid placering *************/
+.maaltidet_overskrift_1 {
+  grid-column: 1 / -1;
+}
+
+.maaltidet_tekst_1 {
+  grid-column: 1;
+}
+
+.maaltidet_billede_1 {
+  grid-column: 2;
+  min-height: 420px;
+}
+
+.maaltidet_billede_2 {
+  grid-column: 1;
+  min-height: 420px;
+}
+
+.maaltidet_overskrift_2 {
+  grid-column: 2;
+}
+
+.maaltidet_billede_3 {
+  grid-column: 1 / -1;
+  min-height: 520px;
+}
+
+
+.maaltidet_faellesspisning {
+  background-color: var(--color-primary);
+  padding: 5rem 0;
+}
+
+.maaltidet_faellesspisning_section {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem 4rem;
+}
+
+.menu_heading {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+ 
+
+.menu_heading h2 {
+  margin: 0;
+  color: var(--color-text-light);
+  font-size: clamp(3rem, 5vw, 5.5rem);
+  line-height: 1;
+}
+
+.maaltidet_faellesspisning_fredag,
+.maaltidet_faellesspisning_lordag {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.dag {
+  margin: 0;
+  color: var(--color-text-light);
+  font-size: clamp(2rem, 3.5vw, 4rem);
+  line-height: 1.1;
+}
+
+.meal_block h4 {
+  margin: 0 0 1rem;
+  color: #000;
+  font-size: clamp(1.75rem, 2.2vw, 3rem);
+  line-height: 1.1;
+  color: rgb(255, 255, 255);
+}
+
+.meal_block .tid {
+  margin: 0 0 1rem;
+  color: var(--color-text-light);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.meal_block p {
+  margin: 0;
+  color: var(--color-text-light);
+  font-size: 1.35rem;
+  line-height: 1.6;
+  max-width: 28ch;
+}
+
+
+@media (max-width: 1024px) {
+  .maaltidet_section {
+    gap: 2rem;
+    padding: 0 1.5rem 4rem;
+  }
+
+  .maaltidet_faellesspisning_section {
+    gap: 2rem;
+    padding: 0 1.5rem;
+  }
+
+  .maaltidet_billede_1,
+  .maaltidet_billede_2,
+  .maaltidet_billede_3 {
+    min-height: 320px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .maaltidet_overskrift {
+    padding: 3rem 1rem 2rem;
+  }
+
+  .maaltidet_section,
+  .maaltidet_faellesspisning_section {
+    grid-template-columns: 1fr;
+  }
+
+  .maaltidet_overskrift_1,
+  .maaltidet_tekst_1,
+  .maaltidet_billede_1,
+  .maaltidet_billede_2,
+  .maaltidet_overskrift_2,
+  .maaltidet_billede_3,
+  .menu_heading,
+  .maaltidet_faellesspisning_fredag,
+  .maaltidet_faellesspisning_lordag {
+    grid-column: auto;
+  }
+
+  .maaltidet_section p,
+  .meal_block p {
+    max-width: none;
+  }
+
+  .maaltidet_billede_1,
+  .maaltidet_billede_2,
+  .maaltidet_billede_3 {
+    min-height: 240px;
+  }
+
+  .maaltidet_faellesspisning {
+    padding: 3rem 0;
+  }
+}
+
+</style>
