@@ -6,7 +6,11 @@ const { title } = Astro.props;
 <html lang="da">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"
+    <meta name="robot" content="noindex, nofollow" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
+    <link rel="stylesheet" href="src/style/global.css">
+  
     <title>{title}</title>
   </head>
   <body>
@@ -93,6 +97,7 @@ const { title } = Astro.props;
       <div class="footer_social_media">
        <a href="https://www.facebook.com/hoestmoen">
        <img src="billeder/FB.png"> </a>
+
         <a href="https://www.instagram.com/hoestmoen/"> <img src="billeder/IG.png"></a>
       </div>
       <p class="footer_mail">info@hoestmoen.dk</p>

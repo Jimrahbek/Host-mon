@@ -32,9 +32,13 @@ import Layout from "../layouts/Layout.astro";
         </p>
       </div>
 
-      <div class="maaltidet_billede_1">
-        <img src="billeder/musikifokus.png" alt="Måltid på Høst Møn" />
-      </div>
+        <div class="maaltidet_billede_2">
+          <img src="public/billeder/maaltidet_2.png" alt="Om Høst Møn billede" />
+        </div>
+        <div class="maaltidet_overskrift_2">
+          <h3>Råvarerne</h3>
+        
+          <p>Råvarerne er valgt med omtanke – så lokalt og sæsonbaseret som muligt – og tilberedt med respekt for både naturen og de mennesker, der har dyrket, høstet og forvandlet dem. Madjuntaens manifest hylder enkelheden og fællesskabet: at vi spiser det samme, deler det samme og oplever det samme. At måltidet er en pause fra programmet, men også en del af det. At bæredygtighed ikke er et buzzword, men en praksis – i alt fra portionsstørrelser til service og affald.</p>
 
       <div class="maaltidet_billede_2">
         <img src="billeder/maaltidet_1.png" alt="Fællesspisning på Høst Møn" />
@@ -126,6 +130,13 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <style>
+
+html,
+body {
+  margin: 2rem;
+  padding: 1rem;
+  background-color: var(--color-bg);
+}
     /************** Måltidet *********************/
 /************** Måltidet *********************/
 .maaltidet_page {
@@ -142,18 +153,20 @@ import Layout from "../layouts/Layout.astro";
   font-size: clamp(3rem, 6vw, 6rem);
   line-height: 1;
 }
-.maaltide_section > * {
-  margin: 0 auto;
-}
+
 
 .maaltidet_section {
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 0 2rem 5rem;
+   min-height: 100vh;
+  padding-top: 90px 1rem 4rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem 4rem;
-  align-items: center;
+  grid-template-rows: auto;
+  width: min (100%, 1300px);
+  justify-content: center;
+   align-items: center;
+  justify-content: center;
+  gap: 49px;
+  background-color: var(--color-bg);
 }
 
 .maaltidet_section > * {
@@ -175,11 +188,11 @@ import Layout from "../layouts/Layout.astro";
 
 .maaltidet_section img {
   width: 100%;
-  height: 100%;
-  max-width: 100%;
-  display: block;
+  max-width: 500px;
+  max-height: 380px;
   object-fit: cover;
-  border-radius: 24px;
+  display: block;
+  justify-self: center;
 }
 
 /************ Grid placering *************/
@@ -210,10 +223,19 @@ import Layout from "../layouts/Layout.astro";
   min-height: 520px;
 }
 
-
+.maaltidet_billede_3 img {
+  width: 100%;
+  max-width: 1000px;
+  max-height: 380px;
+  object-fit: cover;
+  display: block;
+  justify-self: center; 
+}
+/***************************** Fællesspisning *********************/
 .maaltidet_faellesspisning {
   background-color: var(--color-primary);
-  padding: 5rem 0;
+  width: 100%;
+  padding: 3rem 1rem;
 }
 
 .maaltidet_faellesspisning_section {

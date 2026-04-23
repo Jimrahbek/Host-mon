@@ -4,7 +4,7 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-    <div class="forsidebilledeogh1">
+    <article class="forsidebilledeogh1">
         <div class="overskrift">
             <h1>Tæt på naturen, tæt på musikken.</h1>
         </div>
@@ -12,9 +12,9 @@ import Layout from "../layouts/Layout.astro";
         <div class="hostmonforsidebillede">
             <img src="/billeder/hostmonforside.png" alt="Høst Møn">
         </div>
-    </div>
-    <div class="sektion">
-        <div class="sektiontekst">
+    </article>
+    <article class="sektion">
+        <section class="sektiontekst">
             <div class="sektion-overskrift">
                 <h2>Musik, natur og fællesskab i fokus</h2>
             </div>
@@ -27,31 +27,32 @@ import Layout from "../layouts/Layout.astro";
                     fordybelse.
                 </p>
             </div>
-        </div>
+        </section>
 
         <div class="sektionbillede">
             <img src="billeder/musikifokus.png" alt="Høst Møn">
         </div>
-    </div>
-    <div class="lineupsektion">
+    </article>
+    <article class="lineupsektion">
         <div class="lineup">
             <h2>Gå på opdagelse i dette års lineup</h2>
         </div>
 
         <div class="lineupbilleder">
-            <img src="/billeder/b1.png" alt="">
-            <img src="/billeder/b2.png" alt="">
+            <img src="billeder/b1.png" alt="bandbillede af Snuggle">
+            <img src="billeder/b2.png" alt="Indengangen til Høst Møn, godt befolketet">
         </div>
 
         <div class="lineupbilledenederst">
-            <img src="/billeder/b3.png" alt="">
+            <img src="billeder/b3.png" alt="bandbillede af Boko Yout">
         </div>
-    </div>
+    </article>
     <div class="seneste-nyt">
         <h2>Seneste nyt om dette års Høst Møn</h2>
     </div>
-    <div class="nyheder">
+    <article class="nyheder">
         <div class="nyhed">
+          
             <div class="nyhed-overskrift">
                 <h3>Lineup for 2026 er offentliggjort</h3>
             </div>
@@ -71,7 +72,7 @@ import Layout from "../layouts/Layout.astro";
             </div>
             <button class="knap">Læs mere</button>
         </div>
-    </div>
+    </article>
 </Layout>
 
 <style>
@@ -124,9 +125,10 @@ import Layout from "../layouts/Layout.astro";
 }
 
 .lineupsektion {
-  background-color: #00393e;
+  background-color: var(--color-primary);
   padding-top: 50px;
-  padding-bottom: 5px;
+  padding-bottom: 50px;
+  width: 100%;
 }
 
 .lineup {
@@ -138,6 +140,7 @@ import Layout from "../layouts/Layout.astro";
 
 .lineup h2 {
   margin: 0;
+  color: var(--color-text-light);
 }
 
 .lineupbilleder {
@@ -172,8 +175,8 @@ import Layout from "../layouts/Layout.astro";
   text-align: center;
 }
 .knap {
-  background-color: #873000;
-  color: white;
+  background-color: var(--color-cta);
+  color: var(--color-text-light);
   padding: 8px 32px;
   border: none;
   border-radius: 20px;
@@ -209,7 +212,7 @@ import Layout from "../layouts/Layout.astro";
     max-width: none;
   }
   .lineupsektion {
-    background-color: #00393e;
+    background-color: var(--color-primary);
     padding: 30px 20px 40px 20px;
   }
 
@@ -222,7 +225,7 @@ import Layout from "../layouts/Layout.astro";
     margin: 0;
     font-size: 28px;
     line-height: 1.2;
-    color: white;
+    color: var(--color-text-light);
   }
 
   .lineupbilleder {

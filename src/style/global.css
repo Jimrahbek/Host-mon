@@ -88,16 +88,6 @@ p {
   }
 }
 
-/*********************** Footer *****************/
-footer {
-  background-color: var(--color-primary);
-  text-align: center;
-  padding: 1rem;
-  width: 100%;
-  color: var(--color-text-light);
-  text-decoration: none;
-}
-
 /************  Footer *************/
 footer {
   display: grid;
@@ -105,9 +95,12 @@ footer {
   justify-content: space-between;
   text-align: center;
   background-color: var(--color-primary);
+  color: var(--color-text-light);
   width: 100%;
   left: 0;
   bottom: 0;
+  padding: 1rem;
+  text-decoration: none;
 }
 
 .footer_adresse {
