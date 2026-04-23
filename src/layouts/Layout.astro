@@ -12,7 +12,7 @@ const { title } = Astro.props;
   <body>
  <header class="topbar">
         <div class="logo">
-            <a href="/src/pages/index.astro">
+            <a href="/">
                 <img src="billeder/670282915_3785650628231726_4077932530482168911_n.png" alt="Høst Møn">
             </a>
         </div>
@@ -29,7 +29,9 @@ const { title } = Astro.props;
         <div class="close-btn" id="close-menu">✕</div>
 
         <div class="burger-logo-wrap">
-            <img src="billeder/670282915_3785650628231726_4077932530482168911_n.png" alt="Høst Møn" class="burger-logo">
+            <a href="/">
+                <img src="billeder/670282915_3785650628231726_4077932530482168911_n.png" alt="Høst Møn" class="burger-logo">
+            </a>
         </div>
         <nav class="burger-nav">
             <div class="burger-link">
@@ -103,10 +105,6 @@ const { title } = Astro.props;
 
 
 <style>
-footer {
-  width: min(1200px, 100%);
-  margin-inline: auto;
-}
 
 
 /*********************** Footer *****************/
@@ -215,7 +213,7 @@ body.menu-open {
 
 .burger-title {
   text-decoration: none;
-  color: #000;
+  color: var(--color-text);
   font-size: 24px;
   font-weight: 700;
   line-height: 1.2;
@@ -226,8 +224,8 @@ body.menu-open {
   height: 42px;
   min-width: 42px;
   border-radius: 50%;
-  background-color: #a64000;
-  color: white;
+  background-color: var(--color-cta);
+  color: var(--color-text-light);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -248,7 +246,7 @@ body.menu-open {
   display: block;
   width: 100%;
   height: 3px;
-  background-color: #000;
+  background-color: var(--color-text);
   border-radius: 50px;
 }
 
@@ -259,7 +257,7 @@ body.menu-open {
   right: -100%; 
   width: 100%; 
   height: 100vh;
-  background-color: #c8d2bd;
+  background-color: var(--color-bg);
   z-index: 9999;
   transition: right 0.4s ease;
   overflow-y: auto;
@@ -293,7 +291,7 @@ body.menu-open {
   justify-content: space-between;
   padding: 18px 10px 18px 36px;
   text-decoration: none;
-  color: #000;
+  color: var(--color-text);
   border-top: 1px solid rgba(0, 0, 0, 0.15);
   font-family: "Source Sans 3", sans-serif;
 }
@@ -313,8 +311,8 @@ body.menu-open {
   height: 42px;
   min-width: 42px;
   border-radius: 50%;
-  background-color: #a64000;
-  color: white;
+  background-color: var(--color-cta);
+  color: var(--color-text-light);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -330,7 +328,7 @@ body.menu-open {
 
 .contact-mail {
   display: inline-block;
-  color: #000;
+  color: var(--color-text);
   font-size: 18px;
   margin-bottom: 24px;
   text-transform: uppercase;
@@ -341,7 +339,7 @@ body.menu-open {
   margin: 0 0 28px;
   font-size: 17px;
   font-family: "Source Sans 3", sans-serif;
-  color: #000;
+  color: var(--color-text);
 }
 
 .social-block {
@@ -355,7 +353,7 @@ body.menu-open {
 .find-os {
   font-size: 18px;
   margin: 0;
-  color: #000;
+  color: var(--color-text);
   font-family: "Source Sans 3", sans-serif;
 }
 
@@ -377,75 +375,8 @@ body.menu-open {
   object-fit: contain;
 }
 
-.forsidebilledeogh1 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 80px;
-}
 
-@media (max-width: 768px) {
-  .sektion {
-    flex-direction: column;
-    text-align: center;
-  }
-  .sektiontekst {
-    margin-left: 0;
-    max-width: none;
-  }
-  .lineupsektion {
-    background-color: #00393e;
-    padding: 30px 20px 40px 20px;
-  }
 
-  .lineup {
-    text-align: center;
-    margin: 0 0 20px 0;
-  }
-
-  .lineup h2 {
-    margin: 0;
-    font-size: 28px;
-    line-height: 1.2;
-    color: white;
-  }
-
-  .lineupbilleder {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .lineupbilleder img:first-child {
-    width: 300px;
-    height: auto;
-    order: 1;
-  }
-
-  .lineupbilleder img:last-child {
-    width: 300px;
-    height: auto;
-    order: 3;
-    align-self: flex-end;
-    margin-right: 20px;
-    margin-top: -10px;
-  }
-
-  .lineupbilledenederst {
-    display: flex;
-    justify-content: flex-start;
-    margin-top: -200px;
-  }
-
-  .lineupbilledenederst img {
-    width: 300px;
-    height: auto;
-    margin: 0;
-    margin-left: 10px;
-    margin-top: 0; 
-  }
-}
 
 </style>
 
