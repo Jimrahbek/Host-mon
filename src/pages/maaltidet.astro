@@ -24,7 +24,7 @@ import Layout from "../layouts/Layout.astro";
           <img src="public/billeder/maaltidet_2.png" alt="Om Høst Møn billede" />
         </div>
         <div class="maaltidet_overskrift_2">
-          <h3>Høst Møn 2026: Musik, fællesspisning og festival med plads til det hele</h3>
+          <h3>Råvarerne</h3>
         
           <p>Råvarerne er valgt med omtanke – så lokalt og sæsonbaseret som muligt – og tilberedt med respekt for både naturen og de mennesker, der har dyrket, høstet og forvandlet dem. Madjuntaens manifest hylder enkelheden og fællesskabet: at vi spiser det samme, deler det samme og oplever det samme. At måltidet er en pause fra programmet, men også en del af det. At bæredygtighed ikke er et buzzword, men en praksis – i alt fra portionsstørrelser til service og affald.</p>
 
@@ -77,20 +77,29 @@ import Layout from "../layouts/Layout.astro";
     </Layout>
 
 <style>
+
+html,
+body {
+  margin: 2rem;
+  padding: 1rem;
+  background-color: var(--color-bg);
+}
     /************** Måltidet *********************/
 .maaltidet_overskrift {
   text-align: center;
   margin: 2rem 0;
 }
-.maaltide_section > * {
-  margin: 0 auto;
-}
+
 
 .maaltidet_section {
+   min-height: 100vh;
+  padding-top: 90px 1rem 4rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  width: 1300px;
+  width: min (100%, 1300px);
+  justify-content: center;
+   align-items: center;
   justify-content: center;
   gap: 49px;
   background-color: var(--color-bg);
@@ -99,10 +108,12 @@ import Layout from "../layouts/Layout.astro";
 
 
 .maaltidet_section img {
+  width: 100%;
   max-width: 500px;
   max-height: 380px;
   object-fit: cover;
   display: block;
+  justify-self: center;
 }
 /************  1. række *************/
 
@@ -146,9 +157,19 @@ import Layout from "../layouts/Layout.astro";
   align-self: stretch;
 }
 
+.maaltidet_billede_3 img {
+  width: 100%;
+  max-width: 1000px;
+  max-height: 380px;
+  object-fit: cover;
+  display: block;
+  justify-self: center; 
+}
 /***************************** Fællesspisning *********************/
 .maaltidet_faellesspisning {
   background-color: var(--color-primary);
+  width: 100%;
+  padding: 3rem 1rem;
 }
 .maaltidet_faellesspisning_section {
   display: grid;
