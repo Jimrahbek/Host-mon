@@ -1,34 +1,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Candal&family=Comfortaa:wght@300..700&family=Covered+By+Your+Grace&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Jura:wght@300..700&family=Mochiy+Pop+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Syncopate:wght@400;700&display=swap");
 
 :root {
-  --baggrund: #dae6cb;
+  --color-primary: #00393e;
+  --color-cta: #873000;
+  --color-bg: #dae6cb;
+  --color-text: #2d3436;
+  --color-text-light: #f1f2f6;
 }
 
 html,
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--baggrund);
+  background-color: var(--color-bg);
 }
 
 body {
-  background-color: var(--baggrund);
+  background-color: var(--color-bg);
 }
 
 h1 {
-  font-family: "Covered By Your Grace", cursive;
-  font-size: 100px;
-  font-weight: 200;
+  font-family: "MochiyPopPOne", sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  margin: 0.5rem 0;
 }
 
 h2 {
-  font-family: "Mochiy Pop One", sans-serif;
-  font-size: 45px;
+  font-family: "MochiyPopPOne", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  margin: 0.5rem 0;
 }
 
 h3 {
-  font-family: "Source Sans 3", sans-serif;
-  font-size: 35px;
+  font-family: "MochiyPopPOne", sans-serif;
+  font-size: 1.25rem;
+  font-weight: regular;
+  color: var(--color-primary);
+  margin: 0.5rem 0;
 }
 h4 {
   font-family: "Covered By Your Grace", cursive;
@@ -40,9 +52,12 @@ h5 {
 }
 
 p {
-  font-family: "Source Sans 3", sans-serif;
-  font-size: 20px;
+  font-family: "SourceSans3", sans-serif;
+  font-size: 1rem;
+  color: var(--color-text);
+  margin: 0.5rem 0;
 }
+
 @media (max-width: 768px) {
   h1 {
     font-size: 60px;
@@ -57,4 +72,61 @@ p {
   p {
     font-size: 22px;
   }
+}
+
+/*********************** Footer *****************/
+footer {
+  background-color: var(--color-primary);
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  color: var(--color-text-light);
+  text-decoration: none;
+}
+
+/************  Footer *************/
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+  text-align: center;
+  background-color: var(--color-primary);
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+.footer_adresse {
+  text-align: bottom;
+  justify-self: right;
+  padding: 0, 5rem;
+  color: var(--color-text-light);
+}
+
+.footer_social_media {
+  text-align: bottom;
+  justify-self: center;
+  padding: 1rem;
+  width: 100%;
+  color: var(--color-text-light);
+}
+
+.footer_mail {
+  text-align: bottom;
+  justify-self: left;
+  padding: 0, 5rem;
+  color: var(--color-text-light);
+}
+
+/****************************/
+
+image {
+  display: block;
+  margin: auto;
+}
+
+a {
+  color: var(--color-text-light);
+  text-decoration: none;
 }
