@@ -12,70 +12,70 @@ import Layout from "../layouts/Layout.astro";
 
 
             <div class="blogen">
-                <h1>HOVEDSCENEN: BLØGEN</h1>
+                 <h2 class="fredag">FREDAG 28. august:</h2>
+              <h4>HOVEDSCENEN: BLØGEN</h4>
+<div class="tidspunkt">
+                    <h5>16:00 - 18:00</h5>
+                    <h5>Spawner</h5>
+                </div>
+                <div class="tidspunkt">
+                    <h5>18:30 - 20:30</h5>
+                    <h5>Majke Voss</h5>
+                </div>
+                <div class="tidspunkt">
+                    <h5>21:00 - 23:00</h5>
+                    <h5>Miaw</h5>
+                </div>
 
-                <h2 class="fredag">FREDAG 28. august:</h2>
-                <div class="tidspunkt">
-                    <p>16:00 - 18:00</p>
-                    <p>Spawner</p>
-                </div>
-                <div class="tidspunkt">
-                    <p>18:30 - 20:30</p>
-                    <p>Majke Voss</p>
-                </div>
-                <div class="tidspunkt">
-                    <p>21:00 - 23:00</p>
-                    <p>Miaw</p>
-                </div>
 
-
-                <h1 class="ekkomobil">SKOVSCENEN: EKKO</h1>
+                <h4>SKOVSCENEN: EKKO</h4>
                 <div class="tidspunkt">
-                    <p>16:00 - 18:00</p>
-                    <p>Boko Yout (S)</p>
+                    <h5>16:00 - 18:00</h5>
+                    <h5>Boko Yout (S)</h5>
                 </div>
                 <div class="tidspunkt">
-                    <p>18:30 - 20:30</p>
-                    <p>Torben Laks</p>
+                    <h5>18:30 - 20:30</h5>
+                    <h5>Torben Laks</h5>
                 </div>
                 <div class="tidspunkt">
-                    <p>21:00 - 23:00</p>
-                    <p>School of X</p>
+                    <h5>21:00 - 23:00</h5>
+                    <h5>School of X</h5>
                 </div>
             </div>
 
 
             <div class="ekko">
-                <h1 class="ekkodesktop">HOVEDSCENEN: BLØGEN</h1>
                 <h2 class="lordagmobil">LØRDAG 29. august:</h2>
+              <h4>HOVEDSCENEN: BLØGEN</h4>
+               
 
                 <div class="tidspunkt">
 
-                    <p>17:00 - 19:00</p>
-                    <p>Papa Bues Viking Jazzband</p>
+                    <h5>17:00 - 19:00</h5>
+                    <h5>Papa Bues Viking Jazzband</h5>
                 </div>
                 <div class="tidspunkt">
-                    <p>19:30 - 21:30</p>
-                    <p>Lars & momsregnskabet</p>
+                    <h5>19:30 - 21:30</h5>
+                    <h5>Lars & momsregnskabet</h5>
                 </div>
                 <div class="tidspunkt">
-                    <p>22:00 - 24:00</p>
-                    <p>Chardonnaderne</p>
+                    <h5>22:00 - 24:00</h5>
+                    <h5>Chardonnaderne</h5>
                 </div>
 
 
-                <h1 class="ekkodmobil1">SKOVSCENEN: EKKO</h1>
+                <h4>SKOVSCENEN: EKKO</h4>
                 <div class="tidspunkt">
-                    <p>17:00 - 19:00</p>
-                    <p>De tabte småkager</p>
+                    <h5>17:00 - 19:00</h5>
+                    <h5>De tabte småkager</h5>
                 </div>
                 <div class="tidspunkt">
-                    <p>19:30 - 21:30</p>
-                    <p>Malmelade sluperne</p>
+                    <h5>19:30 - 21:30</h5>
+                    <h5>Malmelade sluperne</h5>
                 </div>
                 <div class="tidspunkt">
-                    <p>22:00 - 24:00</p>
-                    <p>Snuggle</p>
+                    <h5>22:00 - 24:00</h5>
+                    <h5>Snuggle</h5>
                 </div>
             </div>
 
@@ -88,33 +88,7 @@ import Layout from "../layouts/Layout.astro";
     flex-direction: column;
     padding: 30px;
   }
-
-  .blogen,
-  .ekko {
-    display: contents;
-  }
-
-  .fredag {
-    order: -2;
-  }
-
-  .fredag17 {
-    order: -2;
-    display: block;
-  }
-
-  .lordag {
-    display: none;
-    margin-top: 30px;
-  }
-
-  .lordag17 {
-    order: 10;
-    display: block;
-    margin-top: 30px;
-  }
-
-  .festivalprogram h2 {
+.festivalprogram h2 {
     margin-top: 30px;
   }
 
@@ -128,55 +102,25 @@ import Layout from "../layouts/Layout.astro";
   margin: 0 auto;
 }
 
-body {
-  background-color: #dae6cb;
-  margin: 0;
-  padding: 0;
-}
-
-footer {
-  background-color: #00393e;
-  color: #dae6cb;
-  font-family: "Source Sans 3", sans-serif;
-}
-
 .festivaloversigt {
-  font-size: 20px;
-  text-align: center;
-  font-family: "Covered By Your Grace", sans-serif;
-}
+ text-align: center;
+ }
 
 .festivaloversigt img {
   width: 100%;
 }
-.ekkodesktop {
-  order: -2;
-}
-p {
-  font-family: "Mochiy Pop One", sans-serif;
-}
 
-.fredag17 {
-  display: none;
-}
+
+.lordagmobil{
+  color:#873000;
+ }
+
 
 .fredag {
   display: flex;
   flex-direction: column;
   order: -1;
-}
-
-.lordag17 {
-  display: none;
-}
-
-.festivalprogram h2 {
-  color: #a03900;
-  font-family: "Mochiy Pop One", sans-serif;
-}
-
-.festivalprogram h1 {
-  font-family: "Covered By Your Grace", sans-serif;
+  color: #873000;
 }
 
 .tidspunkt {
@@ -192,13 +136,9 @@ p {
     display: block;
   }
 
-  .festivaloversigt {
-    font-size: 64px;
-  }
-
   .festivalprogram {
     max-width: 1000px;
-    padding: 90px;
+    padding: 100px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
@@ -206,22 +146,7 @@ p {
 
   .tidspunkt {
     grid-template-columns: 1fr 2fr;
-  }
-
-  .fredag17 {
-    display: block;
-  }
-
-  .lordag17 {
-    display: block;
-  }
-
-  .blogenmobil {
-    display: none;
-  }
-
-  h1 {
-    font-size: 50px;
+ 
   }
 }
 </style>

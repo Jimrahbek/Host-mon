@@ -12,7 +12,9 @@ const { title } = Astro.props;
   <body>
  <header class="topbar">
         <div class="logo">
-            <img src="Billeder/670282915_3785650628231726_4077932530482168911_n.png" alt="Høst Møn">
+            <a href="/">
+                <img src="billeder/670282915_3785650628231726_4077932530482168911_n.png" alt="Høst Møn">
+            </a>
         </div>
 
         <div class="burger" id="burger-toggle">
@@ -27,7 +29,9 @@ const { title } = Astro.props;
         <div class="close-btn" id="close-menu">✕</div>
 
         <div class="burger-logo-wrap">
-            <img src="Billeder/670282915_3785650628231726_4077932530482168911_n.png" alt="Høst Møn" class="burger-logo">
+            <a href="/">
+                <img src="billeder/670282915_3785650628231726_4077932530482168911_n.png" alt="Høst Møn" class="burger-logo">
+            </a>
         </div>
         <nav class="burger-nav">
             <div class="burger-link">
@@ -105,13 +109,6 @@ const { title } = Astro.props;
 <style>
 
 
-	body {
-  margin: 0;
-  background-color: #c8d2bd;
-}
-body.menu-open {
-  overflow: hidden;
-}
 .burger-logo {
   width: 210px;
 }
@@ -311,186 +308,8 @@ body.menu-open {
   object-fit: contain;
 }
 
-.forsidebilledeogh1 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 80px;
-}
 
-.overskrift {
-  text-align: center;
-  color: rgb(0, 0, 0);
-}
-.hostmonforsidebillede img {
-  display: block;
-  max-width: 700px;
-  width: 100%;
-  margin: 0 auto;
-}
-.sektionoverskrift {
-  text-align: left;
-  color: rgb(0, 0, 0);
-  font-size: 20px;
-}
-.sektion {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-.sektionbillede img {
-  max-width: 500px;
-  width: 100%;
-}
-.sektiontekst {
-  flex: 1;
-  max-width: 500px;
-  line-height: 1.6;
-  margin-left: 50px;
-}
-.sektion-overskrift {
-  font-size: 25px;
-  margin-bottom: 10px;
-}
 
-.sektion-tekst {
-  font-size: 20px;
-}
-
-.lineupsektion {
-  background-color: #00393e;
-  padding-top: 50px;
-  padding-bottom: 5px;
-}
-
-.lineup {
-  text-align: center;
-  font-size: 25px;
-  margin: 0 0 -30px 0;
-  color: white;
-}
-
-.lineup h2 {
-  margin: 0;
-}
-
-.lineupbilleder {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
-}
-
-.lineupbilleder img {
-  width: 450px;
-  height: 450px;
-  object-fit: contain;
-}
-
-.lineupbilledenederst img {
-  width: 450px;
-  height: 450px;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto;
-  margin-top: -100px;
-}
-.seneste-nyt {
-  color: rgb(0, 0, 0);
-  padding: 5px;
-  text-align: center;
-  font-size: 25px;
-}
-.nyhed-overskrift {
-  font-size: 20px;
-  text-align: center;
-}
-.knap {
-  background-color: #873000;
-  color: white;
-  padding: 8px 32px;
-  border: none;
-  border-radius: 20px;
-  font-size: 16px;
-  cursor: pointer;
-  display: block;
-  margin: 20px auto;
-  font-family: "Mochiy Pop One", sans-serif;
-
-  transition: all 0.2s ease; 
-}
-
-.knap:hover {
-  transform: scale(1.06); 
-}
-.nyheder {
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
-}
-@media (max-width: 768px) {
-  .sektion {
-    flex-direction: column;
-    text-align: center;
-  }
-  .sektiontekst {
-    margin-left: 0;
-    max-width: none;
-  }
-  .lineupsektion {
-    background-color: #00393e;
-    padding: 30px 20px 40px 20px;
-  }
-
-  .lineup {
-    text-align: center;
-    margin: 0 0 20px 0;
-  }
-
-  .lineup h2 {
-    margin: 0;
-    font-size: 28px;
-    line-height: 1.2;
-    color: white;
-  }
-
-  .lineupbilleder {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .lineupbilleder img:first-child {
-    width: 300px;
-    height: auto;
-    order: 1;
-  }
-
-  .lineupbilleder img:last-child {
-    width: 300px;
-    height: auto;
-    order: 3;
-    align-self: flex-end;
-    margin-right: 20px;
-    margin-top: -10px;
-  }
-
-  .lineupbilledenederst {
-    display: flex;
-    justify-content: flex-start;
-    margin-top: -200px;
-  }
-
-  .lineupbilledenederst img {
-    width: 300px;
-    height: auto;
-    margin: 0;
-    margin-left: 10px;
-    margin-top: 0; 
-  }
-}
 
 </style>
 
