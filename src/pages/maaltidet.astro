@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
 ---
-
   <Layout>
     
       <div class="maaltidet_overskrift">
@@ -18,11 +17,11 @@ import Layout from "../layouts/Layout.astro";
           <p>Her er måltidet ikke bare noget, der stiller sulten. Det er et samlingspunkt. Et sted, hvor fremmede bliver til fæller, hvor samtaler opstår på tværs af borde, og hvor tempoet sættes ned, så der er plads til både smag, nærvær og nysgerrighed.</p>
         </div>
         <div class="maaltidet_billede_1">
-          <img src="img/maaltidet_1.png" alt="Om Høst Møn billede" />
+          <img src="public/billeder/maaltidet_1.png" alt="Om Høst Møn billede" />
         </div>
 
         <div class="maaltidet_billede_2">
-          <img src="img/maaltidet_2.png" alt="Om Høst Møn billede" />
+          <img src="public/billeder/maaltidet_2.png" alt="Om Høst Møn billede" />
         </div>
         <div class="maaltidet_overskrift_2">
           <h2>Høst Møn 2026: Musik, fællesspisning og festival med plads til det hele</h2>
@@ -32,7 +31,7 @@ import Layout from "../layouts/Layout.astro";
           <p>På Høst Møn er måltidet en invitation. Til at sætte sig ned. Til at række fadet videre. Til at smage noget nyt. Og måske vigtigst af alt: til at være sammen.</p>
         </div>
         <div class="maaltidet_billede_3">
-          <img src="img/maaltidet_3.png" alt="Om Høst Møn billede" />
+          <img src="public/billeder/maaltidet_3.png" alt="Om Høst Møn billede" />
         </div>
       </section>
 <section class="maaltidet_faellesspisning">
@@ -78,8 +77,6 @@ import Layout from "../layouts/Layout.astro";
     </Layout>
 
 <style>
-
-
     /************** Måltidet *********************/
 .maaltidet_overskrift {
   text-align: center;
@@ -185,136 +182,5 @@ import Layout from "../layouts/Layout.astro";
   }
 }
 
-
-
-
-/******************* global styles ****************/
-:root {
-  --color-primary: #00393e;
-  --color-cta: #873000;
-  --color-bg: #dae6cb;
-  --color-text: #2d3436;
-  --color-text-light: #f1f2f6;
-}
-
-
-body {
-  margin: 5rem;
-  overflow-x: hidden;
-}
-
-header,
-main,
-footer {
-  width: min(1200px, 100%);
-  margin-inline: auto;
-}
-
-main {
-  min-height: 100vh;
-  padding-top: 90px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-html {
-  background-color: var(--color-bg);
-}
-
-image {
-  display: block;
-  margin: auto;
-}
-
-a {
-  color: var(--color-text-light);
-  text-decoration: none;
-}
-
-/************************. top / menu bar ******************/
-.logo img {
-  height: 70px;
-  width: auto;
-}
-.logo_index img {
-  display: flex;
-  justify-content: center;
-  height: 90px;
-  width: auto;
-}
-
-header {
-  width: 100%;
-  position: fixed;
-  background-color: #dae6cb;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-}
-
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-}
-
-#borderimg {
-  /* You can also use border-top or border-bottom to target the side you want affected */
-  border: 10px solid transparent;
-  padding: 15px;
-  -webkit-border-image: url(border.png) 50 round; /* Safari 3.1-5 */
-  -o-border-image: url(border.png) 50 round; /* Opera 11-12.1 */
-  border-image: url(border.png) 50 round;
-}
-
-/*********************** Footer *****************/
-footer {
-  background-color: var(--color-primary);
-  text-align: center;
-  padding: 1rem;
-  width: 100%;
-  color: var(--color-text-light);
-  text-decoration: none;
-}
-
-/************  Footer *************/
-footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-content: space-between;
-  text-align: center;
-  background-color: var(--color-primary);
-  width: 100%;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-}
-
-.footer_adresse {
-  text-align: bottom;
-  justify-self: right;
-  padding: 0, 5rem;
-  color: var(--color-text-light);
-}
-
-.footer_social_media {
-  text-align: bottom;
-  justify-self: center;
-  padding: 1rem;
-  width: 100%;
-  color: var(--color-text-light);
-}
-
-.footer_mail {
-  text-align: bottom;
-  justify-self: left;
-  padding: 0, 5rem;
-  color: var(--color-text-light);
-}
 
 </style>
