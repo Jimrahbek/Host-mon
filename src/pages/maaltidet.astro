@@ -82,6 +82,9 @@ import Layout from "../layouts/Layout.astro";
   text-align: center;
   margin: 2rem 0;
 }
+.maaltide_section > * {
+  margin: 0 auto;
+}
 
 .maaltidet_section {
   display: grid;
@@ -89,12 +92,11 @@ import Layout from "../layouts/Layout.astro";
   grid-template-rows: auto;
   width: 1300px;
   justify-content: center;
+  gap: 49px;
   background-color: var(--color-bg);
 }
 
-.maaltide_section > * {
-  margin: 0;
-}
+
 
 .maaltidet_section img {
   max-width: 500px;
@@ -172,7 +174,7 @@ import Layout from "../layouts/Layout.astro";
   grid-column: 2;
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 768px) {
   .maaltidet_section,
   .maaltidet_faellesspisning_section {
     width: 100%;
