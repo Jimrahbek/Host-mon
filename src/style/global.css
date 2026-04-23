@@ -11,7 +11,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--baggrund);
+  background-color: var(--color-bg);
 }
 
 body {
@@ -71,6 +71,7 @@ p {
   font-size: 18px;
   line-height: 1.3;
 }
+
 @media (max-width: 768px) {
   h1 {
     font-size: 40px;
@@ -80,9 +81,66 @@ p {
     font-weight: 500;
   }
   h3 {
-    font-size: 25px;
+    font-size: 20px;
   }
   p {
     font-size: 20px;
   }
+}
+
+/*********************** Footer *****************/
+footer {
+  background-color: var(--color-primary);
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  color: var(--color-text-light);
+  text-decoration: none;
+}
+
+/************  Footer *************/
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+  text-align: center;
+  background-color: var(--color-primary);
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+.footer_adresse {
+  text-align: bottom;
+  justify-self: right;
+  padding: 0, 5rem;
+  color: var(--color-text-light);
+}
+
+.footer_social_media {
+  text-align: bottom;
+  justify-self: center;
+  padding: 1rem;
+  width: 100%;
+  color: var(--color-text-light);
+}
+
+.footer_mail {
+  text-align: bottom;
+  justify-self: left;
+  padding: 0, 5rem;
+  color: var(--color-text-light);
+}
+
+/****************************/
+
+image {
+  display: block;
+  margin: auto;
+}
+
+a {
+  color: var(--color-text-light);
+  text-decoration: none;
 }
