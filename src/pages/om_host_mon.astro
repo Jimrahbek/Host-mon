@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 ---
 
   <Layout>
-      <h1>Om Høst Møn</h1>
+     <div class="over_overskrift"><h1>Om Høst Møn</h1></div>
 
       <section class="om_host_mon_section">
         <div class="om_host_mon_overskrift_1">
@@ -44,6 +44,12 @@ import Layout from "../layouts/Layout.astro";
 
 </Layout>
 <style>
+
+
+.over_overskrift {
+  text-align: center;
+  margin: 2rem 0;
+}
 .om_host_mon_section {
   display: grid;
   grid-template-columns: 500px 200px 460px;

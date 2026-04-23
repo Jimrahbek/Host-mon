@@ -15,62 +15,86 @@ body {
   background-color: var(--color-bg);
 }
 
-body {
-  background-color: var(--color-bg);
+@font-face {
+  font-family: "covered by your grace";
+  font-style: normal;
+  font-weight: 400;
+  src: url(covered-by-your-grace.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "mochiy pop one";
+  font-style: normal;
+  font-weight: 400;
+  src: url(mochiy-pop-one.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Mochiy Pop P One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  src: url(mochiy-pop-p-one.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "source sans 3";
+  font-style: normal;
+  font-weight: 400;
+  src: url(source-sans-3.woff2) format("woff2");
 }
 
 h1 {
-  font-family: "MochiyPopPOne", sans-serif;
-  font-size: 2.5rem;
+  font-family: "covered by your grace", sans-serif;
+  font-size: 64px;
   font-weight: bold;
   color: var(--color-primary);
   margin: 0.5rem 0;
 }
 
 h2 {
-  font-family: "MochiyPopPOne", sans-serif;
-  font-size: 1.5rem;
+  font-family: "Mochiy Pop P One", sans-serif;
+  font-size: 32px;
   font-weight: bold;
   color: var(--color-primary);
   margin: 0.5rem 0;
 }
 
 h3 {
-  font-family: "MochiyPopPOne", sans-serif;
-  font-size: 1.25rem;
+  font-family: "Mochiy Pop P One", sans-serif;
+  font-size: 24px;
   font-weight: regular;
   color: var(--color-primary);
   margin: 0.5rem 0;
 }
 h4 {
   font-family: "Covered By Your Grace", cursive;
-  font-size: 32px;
+  font-size: 30px;
 }
 h5 {
   font-family: "Mochiy Pop One", sans-serif;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 p {
   font-family: "SourceSans3", sans-serif;
-  font-size: 1rem;
+  font-size: 20px;
   color: var(--color-text);
   margin: 0.5rem 0;
 }
 
 @media (max-width: 768px) {
   h1 {
-    font-size: 60px;
+    font-size: 40px;
   }
   h2 {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 500;
   }
   h3 {
-    font-size: 25px;
+    font-size: 20px;
   }
   p {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 
