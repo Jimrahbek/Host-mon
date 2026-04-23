@@ -9,7 +9,7 @@ import Layout from "../layouts/Layout.astro";
 
       <section class="maaltidet_section">
         <div class="maaltidet_overskrift_1">
-          <h2>Fællesspisning</h2>
+          <h3>Fællesspisning</h3>
         </div>
 
         <div class="maaltidet_tekst_1">
@@ -24,7 +24,7 @@ import Layout from "../layouts/Layout.astro";
           <img src="public/billeder/maaltidet_2.png" alt="Om Høst Møn billede" />
         </div>
         <div class="maaltidet_overskrift_2">
-          <h2>Høst Møn 2026: Musik, fællesspisning og festival med plads til det hele</h2>
+          <h3>Høst Møn 2026: Musik, fællesspisning og festival med plads til det hele</h3>
         
           <p>Råvarerne er valgt med omtanke – så lokalt og sæsonbaseret som muligt – og tilberedt med respekt for både naturen og de mennesker, der har dyrket, høstet og forvandlet dem. Madjuntaens manifest hylder enkelheden og fællesskabet: at vi spiser det samme, deler det samme og oplever det samme. At måltidet er en pause fra programmet, men også en del af det. At bæredygtighed ikke er et buzzword, men en praksis – i alt fra portionsstørrelser til service og affald.</p>
 
@@ -82,6 +82,9 @@ import Layout from "../layouts/Layout.astro";
   text-align: center;
   margin: 2rem 0;
 }
+.maaltide_section > * {
+  margin: 0 auto;
+}
 
 .maaltidet_section {
   display: grid;
@@ -89,12 +92,11 @@ import Layout from "../layouts/Layout.astro";
   grid-template-rows: auto;
   width: 1300px;
   justify-content: center;
+  gap: 49px;
   background-color: var(--color-bg);
 }
 
-.maaltide_section > * {
-  margin: 0;
-}
+
 
 .maaltidet_section img {
   max-width: 500px;
@@ -155,14 +157,17 @@ import Layout from "../layouts/Layout.astro";
   width: 1300px;
   margin: 0 auto;
   justify-content: center;
-  gap: 1rem;
+  gap: 5rem;
 }
 
 .maaltidet_faellesspisning_section h1,
 .maaltidet_faellesspisning_section h2,
+.maaltidet_faellesspisning_section h3,
 .maaltidet_faellesspisning_section p {
   color: var(--color-text-light);
+  margin: 0 auto 1rem;
 }
+ 
 
 .maaltidet_faellesspisning_fredag {
   grid-column: 1;
@@ -172,7 +177,7 @@ import Layout from "../layouts/Layout.astro";
   grid-column: 2;
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 768px) {
   .maaltidet_section,
   .maaltidet_faellesspisning_section {
     width: 100%;

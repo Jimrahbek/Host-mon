@@ -146,7 +146,7 @@ const { title } = Astro.props;
 
 .burger-title {
   text-decoration: none;
-  color: #000;
+  color: var(--color-text);
   font-size: 24px;
   font-weight: 700;
   line-height: 1.2;
@@ -157,8 +157,8 @@ const { title } = Astro.props;
   height: 42px;
   min-width: 42px;
   border-radius: 50%;
-  background-color: #a64000;
-  color: white;
+  background-color: var(--color-cta);
+  color: var(--color-text-light);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -179,7 +179,7 @@ const { title } = Astro.props;
   display: block;
   width: 100%;
   height: 3px;
-  background-color: #000;
+  background-color: var(--color-text);
   border-radius: 50px;
 }
 
@@ -190,7 +190,7 @@ const { title } = Astro.props;
   right: -100%; 
   width: 100%; 
   height: 100vh;
-  background-color: #c8d2bd;
+  background-color: var(--color-bg);
   z-index: 9999;
   transition: right 0.4s ease;
   overflow-y: auto;
@@ -224,7 +224,7 @@ const { title } = Astro.props;
   justify-content: space-between;
   padding: 18px 10px 18px 36px;
   text-decoration: none;
-  color: #000;
+  color: var(--color-text);
   border-top: 1px solid rgba(0, 0, 0, 0.15);
   font-family: "Source Sans 3", sans-serif;
 }
@@ -244,8 +244,8 @@ const { title } = Astro.props;
   height: 42px;
   min-width: 42px;
   border-radius: 50%;
-  background-color: #a64000;
-  color: white;
+  background-color: var(--color-cta);
+  color: var(--color-text-light);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -261,7 +261,7 @@ const { title } = Astro.props;
 
 .contact-mail {
   display: inline-block;
-  color: #000;
+  color: var(--color-text);
   font-size: 18px;
   margin-bottom: 24px;
   text-transform: uppercase;
@@ -272,7 +272,7 @@ const { title } = Astro.props;
   margin: 0 0 28px;
   font-size: 17px;
   font-family: "Source Sans 3", sans-serif;
-  color: #000;
+  color: var(--color-text);
 }
 
 .social-block {
@@ -286,7 +286,7 @@ const { title } = Astro.props;
 .find-os {
   font-size: 18px;
   margin: 0;
-  color: #000;
+  color: var(--color-text);
   font-family: "Source Sans 3", sans-serif;
 }
 
